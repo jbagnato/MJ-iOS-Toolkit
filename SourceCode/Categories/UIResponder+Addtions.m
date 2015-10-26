@@ -15,11 +15,11 @@
 //
 #import "UIResponder+Additions.h"
 
-static __weak UIResponder *__currentFirstResponder = nil;
+static __weak __kindof UIResponder *__currentFirstResponder = nil;
 
 @implementation UIResponder (Additions)
 
-+ (UIResponder*)add_firstResponder
++ (__kindof UIResponder*)add_firstResponder
 {
     __currentFirstResponder = nil;
     

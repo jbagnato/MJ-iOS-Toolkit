@@ -24,6 +24,6 @@
  * Searches and returns the current first responder.
  * @return The first responder.
  **/
-+ (UIResponder*)add_firstResponder;
++ (__kindof UIResponder*)add_firstResponder;
 
 @end

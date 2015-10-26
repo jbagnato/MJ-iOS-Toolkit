@@ -21,6 +21,11 @@
 		D238DF461BC7E34400FB0DF4 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D238DF3D1BC7E32000FB0DF4 /* NSString+Additions.m */; settings = {ASSET_TAGS = (); }; };
 		D238DF471BC7E34400FB0DF4 /* UIResponder+Addtions.m in Sources */ = {isa = PBXBuildFile; fileRef = D238DF3F1BC7E32000FB0DF4 /* UIResponder+Addtions.m */; settings = {ASSET_TAGS = (); }; };
 		D238DF481BC7E34400FB0DF4 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D238DF411BC7E32000FB0DF4 /* UIView+Additions.m */; settings = {ASSET_TAGS = (); }; };
+		D2C99C0E1BDE74D300CCC485 /* MJContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C99C0D1BDE74D300CCC485 /* MJContainerViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D2C99C121BDE778400CCC485 /* MJCloudinaryInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C99C111BDE778400CCC485 /* MJCloudinaryInterface.m */; settings = {ASSET_TAGS = (); }; };
+		D2C99C1B1BDE7DEF00CCC485 /* UIBarButtonItem+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C99C181BDE7DEF00CCC485 /* UIBarButtonItem+Additions.m */; settings = {ASSET_TAGS = (); }; };
+		D2C99C201BDE82D900CCC485 /* MJTaskDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C99C1F1BDE82D900CCC485 /* MJTaskDispatcher.m */; settings = {ASSET_TAGS = (); }; };
+		FFB43A2A379BBCDF513A4AC8 /* libPods-MJ-iOS-Toolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E29FF717B1CBC5520389DA4E /* libPods-MJ-iOS-Toolkit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		66733CDADF19DDFE0E0814BA /* Pods-MJ-iOS-Toolkit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJ-iOS-Toolkit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MJ-iOS-Toolkit/Pods-MJ-iOS-Toolkit.debug.xcconfig"; sourceTree = "<group>"; };
+		669D30EECED1E09DE17BD2FD /* Pods-MJ-iOS-Toolkit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJ-iOS-Toolkit.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJ-iOS-Toolkit/Pods-MJ-iOS-Toolkit.release.xcconfig"; sourceTree = "<group>"; };
 		D238DEFA1BC7E2D400FB0DF4 /* MJ-iOS-Toolkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MJ-iOS-Toolkit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D238DEFE1BC7E2D500FB0DF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D238DF001BC7E2D500FB0DF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +70,15 @@
 		D238DF3F1BC7E32000FB0DF4 /* UIResponder+Addtions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+Addtions.m"; sourceTree = "<group>"; };
 		D238DF401BC7E32000FB0DF4 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
 		D238DF411BC7E32000FB0DF4 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		D2C99C0C1BDE74D300CCC485 /* MJContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJContainerViewController.h; sourceTree = "<group>"; };
+		D2C99C0D1BDE74D300CCC485 /* MJContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJContainerViewController.m; sourceTree = "<group>"; };
+		D2C99C101BDE778400CCC485 /* MJCloudinaryInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJCloudinaryInterface.h; sourceTree = "<group>"; };
+		D2C99C111BDE778400CCC485 /* MJCloudinaryInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJCloudinaryInterface.m; sourceTree = "<group>"; };
+		D2C99C171BDE7DEF00CCC485 /* UIBarButtonItem+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Additions.h"; sourceTree = "<group>"; };
+		D2C99C181BDE7DEF00CCC485 /* UIBarButtonItem+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Additions.m"; sourceTree = "<group>"; };
+		D2C99C1E1BDE82D900CCC485 /* MJTaskDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJTaskDispatcher.h; sourceTree = "<group>"; };
+		D2C99C1F1BDE82D900CCC485 /* MJTaskDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJTaskDispatcher.m; sourceTree = "<group>"; };
+		E29FF717B1CBC5520389DA4E /* libPods-MJ-iOS-Toolkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MJ-iOS-Toolkit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFB43A2A379BBCDF513A4AC8 /* libPods-MJ-iOS-Toolkit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0765D822F2EDF652275DC030 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E29FF717B1CBC5520389DA4E /* libPods-MJ-iOS-Toolkit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D238DEF11BC7E2D400FB0DF4 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +122,8 @@
 				D238DF161BC7E2D500FB0DF4 /* MJ-iOS-ToolkitTests */,
 				D238DF211BC7E2D500FB0DF4 /* MJ-iOS-ToolkitUITests */,
 				D238DEFB1BC7E2D400FB0DF4 /* Products */,
+				D32871126313F53F574B7D69 /* Pods */,
+				0765D822F2EDF652275DC030 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +180,8 @@
 		D238DF3A1BC7E32000FB0DF4 /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				D2C99C0F1BDE778400CCC485 /* Managers */,
+				D2C99C0B1BDE74D300CCC485 /* View Controllers */,
 				D238DF3B1BC7E32000FB0DF4 /* Categories */,
 			);
 			name = SourceCode;
@@ -168,6 +197,8 @@
 				D238DF3F1BC7E32000FB0DF4 /* UIResponder+Addtions.m */,
 				D238DF401BC7E32000FB0DF4 /* UIView+Additions.h */,
 				D238DF411BC7E32000FB0DF4 /* UIView+Additions.m */,
+				D2C99C171BDE7DEF00CCC485 /* UIBarButtonItem+Additions.h */,
+				D2C99C181BDE7DEF00CCC485 /* UIBarButtonItem+Additions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -183,6 +214,35 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		D2C99C0B1BDE74D300CCC485 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D2C99C0C1BDE74D300CCC485 /* MJContainerViewController.h */,
+				D2C99C0D1BDE74D300CCC485 /* MJContainerViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D2C99C0F1BDE778400CCC485 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D2C99C101BDE778400CCC485 /* MJCloudinaryInterface.h */,
+				D2C99C111BDE778400CCC485 /* MJCloudinaryInterface.m */,
+				D2C99C1E1BDE82D900CCC485 /* MJTaskDispatcher.h */,
+				D2C99C1F1BDE82D900CCC485 /* MJTaskDispatcher.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D32871126313F53F574B7D69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66733CDADF19DDFE0E0814BA /* Pods-MJ-iOS-Toolkit.debug.xcconfig */,
+				669D30EECED1E09DE17BD2FD /* Pods-MJ-iOS-Toolkit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,9 +250,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D238DF271BC7E2D500FB0DF4 /* Build configuration list for PBXNativeTarget "MJ-iOS-Toolkit" */;
 			buildPhases = (
+				986DCD1166B7A6DA67290877 /* Check Pods Manifest.lock */,
 				D238DEF61BC7E2D400FB0DF4 /* Sources */,
 				D238DEF71BC7E2D400FB0DF4 /* Frameworks */,
 				D238DEF81BC7E2D400FB0DF4 /* Resources */,
+				2FFDDC56A3D4D9C4E68D26DD /* Embed Pods Frameworks */,
+				9755A99DAF6E268CAA5FC77F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -308,17 +371,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2FFDDC56A3D4D9C4E68D26DD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MJ-iOS-Toolkit/Pods-MJ-iOS-Toolkit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9755A99DAF6E268CAA5FC77F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MJ-iOS-Toolkit/Pods-MJ-iOS-Toolkit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		986DCD1166B7A6DA67290877 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D238DEF61BC7E2D400FB0DF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C99C0E1BDE74D300CCC485 /* MJContainerViewController.m in Sources */,
 				D238DF441BC7E32000FB0DF4 /* UIView+Additions.m in Sources */,
 				D238DF431BC7E32000FB0DF4 /* UIResponder+Addtions.m in Sources */,
 				D238DF051BC7E2D500FB0DF4 /* ViewController.m in Sources */,
+				D2C99C121BDE778400CCC485 /* MJCloudinaryInterface.m in Sources */,
 				D238DF421BC7E32000FB0DF4 /* NSString+Additions.m in Sources */,
 				D238DF021BC7E2D500FB0DF4 /* AppDelegate.m in Sources */,
 				D238DEFF1BC7E2D500FB0DF4 /* main.m in Sources */,
+				D2C99C1B1BDE7DEF00CCC485 /* UIBarButtonItem+Additions.m in Sources */,
+				D2C99C201BDE82D900CCC485 /* MJTaskDispatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +573,7 @@
 		};
 		D238DF281BC7E2D500FB0DF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66733CDADF19DDFE0E0814BA /* Pods-MJ-iOS-Toolkit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "MJ-iOS-Toolkit/Info.plist";
@@ -469,6 +585,7 @@
 		};
 		D238DF291BC7E2D500FB0DF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 669D30EECED1E09DE17BD2FD /* Pods-MJ-iOS-Toolkit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "MJ-iOS-Toolkit/Info.plist";

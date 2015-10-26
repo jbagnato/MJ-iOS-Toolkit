@@ -1,0 +1,691 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04A82C6E681F3AA2C70B966771B8BF95 /* HNKSimpleFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = B4A3EA6DDD4E72A76E69B84D596C7AA6 /* HNKSimpleFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		065B10D0B40E19F1817AEA0020A2FA54 /* CLCloudinary.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C77EEF4C13344F8A121B2AED46165C7 /* CLCloudinary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A6CBF0777487D81759CBE849EC30025 /* HNKDiskFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 39BF83D9A42CB5DAE5FE4B0C37FF4E18 /* HNKDiskFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F514EA67D9AA62900F3BBA78AAFDDCC /* CLTransformation.h in Headers */ = {isa = PBXBuildFile; fileRef = A09F1185FD50886B5715FC385F564468 /* CLTransformation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13A2F50C9188628838F00BF0CE319133 /* Haneke-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B4C2D1D60DEB089040DAB79E6C2ED1 /* Haneke-dummy.m */; };
+		17273D359998B79F793A0A1A4EBE5F43 /* CLUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = C6619EA680CD234E3CCF2F6982FE9795 /* CLUploader.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1972D9D133B0020FCCDBD966FFA5BBBD /* UIImageView+Haneke.m in Sources */ = {isa = PBXBuildFile; fileRef = 882F78B9CF6A93E49CA54EE90DA3315D /* UIImageView+Haneke.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		203B461B17F0984D940D4C4031C5C0A5 /* HNKNetworkFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D50922511CC9423E21204E9BDED02D5 /* HNKNetworkFetcher.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		227ED1532CC5C3F6AEB0A79149D85466 /* UIButton+Haneke.h in Headers */ = {isa = PBXBuildFile; fileRef = FE2BD82B0E815D84B76183969CE2985C /* UIButton+Haneke.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		268D9F192CA2C521493925567E825350 /* HNKDiskFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7212542DD93C9860F16179101AAAFA /* HNKDiskFetcher.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2A9688D1785E30ABDDD3CD55F27B8308 /* NSDictionary+CLUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 6630E77EEAC94F5798FE81F8C3E4F21E /* NSDictionary+CLUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31206BC956C2E3DBE2863DEB4000B53E /* CLTransformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C70C626080FBB6E478C33DA726159A5 /* CLTransformation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		348A46D8F0FEA24B64CD83DD2F8744BB /* HNKCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 7491FF617D2F7287D5805670BE7A2111 /* HNKCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3796DBF879F599E80E2ADB9FB8513B13 /* UIButton+Haneke.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E28C57F300BD607082894B4CF851841 /* UIButton+Haneke.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3CA8B7433E1AA567172EBC59AA586950 /* NSString+CLURLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13ECA064F25B033CB083DCF3EE8B69 /* NSString+CLURLEncoding.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3D497D77CA75C7ED1C93148751D62C6D /* Haneke.h in Headers */ = {isa = PBXBuildFile; fileRef = 92B0369482319515814C174FB591B5FA /* Haneke.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40495CF3FBCA997B76F19FF30F3B5927 /* CLEagerTransformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C889350F4747FA87F7C472523712E /* CLEagerTransformation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4234B9D435D573EC4430642B082CBC9C /* HNKNetworkFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = D1746674AD7598AD01D0393AA8B1283E /* HNKNetworkFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4288C1B73C8AF6C2FBA557FC26139285 /* UIImageView+Haneke.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E9E75D602AEDC2BA0411C21EC3AF01E /* UIImageView+Haneke.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AE9AF65D645E51AB73EB6C1DA111CA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C9C39C7D2D6CE8EA1E97CCBC38030C /* Foundation.framework */; };
+		5DA61A1A1D65FEE556E52500302FEBA2 /* CLCloudinary.m in Sources */ = {isa = PBXBuildFile; fileRef = C3124CC788BAFA6DB2518EA4070143AE /* CLCloudinary.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5F9CE9A8FFD385CB5640B1B4DB84F952 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9427CFF9740776DC689B9056DCB96B4 /* ImageIO.framework */; };
+		619674BC51DE1C998B957EE8072CD81E /* CLLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6FA897DAC13E572EF923BDCF6E6C5 /* CLLayer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		62EF8647D599EFE469C1F8505CC937BD /* Cloudinary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E96299567B5A97A2B7D84B44B97999 /* Cloudinary-dummy.m */; };
+		6F3FB006CA15FA52805893EEF235A198 /* NSString+CLURLEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 2067F46773EA1FB6ABF1BEF40DB6DD53 /* NSString+CLURLEncoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7544D815E4DF68B6EDC419F6FBF94F8E /* HNKDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B718D488A84E255E9E2196E1B1F2203 /* HNKDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BAB111C08E0AEF4C57B0E6830C62E27 /* UIView+Haneke.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B24781DBA115B404594CCCCB12D7845 /* UIView+Haneke.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7F713FE55332FF197358CB90BF92855E /* CLLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D2DC910022B3313AC401B3113DBE585 /* CLLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8474F646BBDB7DDD6B839081DD8BCFCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C9C39C7D2D6CE8EA1E97CCBC38030C /* Foundation.framework */; };
+		8B0F5778FB307DFECD6C66AF9CCA9867 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C9C39C7D2D6CE8EA1E97CCBC38030C /* Foundation.framework */; };
+		94765EE3F5744C114633C358B618A488 /* HNKDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD9D2CCFBAD4D754115730E0BEAB820 /* HNKDiskCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A1807526A1D7CB1ECEEC0C4D04DCBE8A /* CLEagerTransformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 44DF38564CB2A2BD8F532D39E3E8589D /* CLEagerTransformation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4520B73CAF1B1A85251376BF83A7BF9 /* Cloudinary.h in Headers */ = {isa = PBXBuildFile; fileRef = 3932C64A1EC0450AF8742DB37A910454 /* Cloudinary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C400F80DA96706132F045363B7F341E9 /* HNKSimpleFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B390188C6B16EEBD1F25F26B13AD50A5 /* HNKSimpleFetcher.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C901C1FE7F64DD9F4FD2EA9017605DD1 /* CLUploader.h in Headers */ = {isa = PBXBuildFile; fileRef = D4DFEC563927C74A72643EAA962EC5C1 /* CLUploader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD0BED545D34FE09DBA5E432D8498928 /* HNKCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 03093EFE0512EBCEF723429B6A418302 /* HNKCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E249C629E3C86698C2C12687BA430FFE /* Pods-MJ-iOS-Toolkit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0F3BE0521F2CCEF6F85B0FAAB374D0 /* Pods-MJ-iOS-Toolkit-dummy.m */; };
+		E32932CC68847E088D10EE59236F17E3 /* NSDictionary+CLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 14117D50F7588F4F09D0DC0FAD5F1A71 /* NSDictionary+CLUtilities.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EC8EF14355F45667A3D9D2755E563252 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C3770DCE99982E481883A2763656074 /* Security.framework */; };
+		FA59B50473A72ABD9085DBD803329364 /* UIView+Haneke.h in Headers */ = {isa = PBXBuildFile; fileRef = CB042A6AE789620D0409901D4F8238AC /* UIView+Haneke.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		514807D25EF662215BB062E1CAC7B2EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E7D726ADA8D51194A8E9EDBDECCADF6;
+			remoteInfo = Haneke;
+		};
+		87CDB03A0AF5F8A8DE6FA6D1DBFE2336 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 369B2BCC31DAE9E8DB0F82A02F1061FE;
+			remoteInfo = Cloudinary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03093EFE0512EBCEF723429B6A418302 /* HNKCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HNKCache.m; path = Haneke/HNKCache.m; sourceTree = "<group>"; };
+		087A37FA027C9C385A3D7A1D7985DA0B /* libCloudinary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCloudinary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C70C626080FBB6E478C33DA726159A5 /* CLTransformation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CLTransformation.m; path = Cloudinary/CLTransformation.m; sourceTree = "<group>"; };
+		14117D50F7588F4F09D0DC0FAD5F1A71 /* NSDictionary+CLUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+CLUtilities.m"; path = "Cloudinary/NSDictionary+CLUtilities.m"; sourceTree = "<group>"; };
+		14FFDB9E5733879BEE146365FD7087B1 /* Haneke-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Haneke-prefix.pch"; sourceTree = "<group>"; };
+		2067F46773EA1FB6ABF1BEF40DB6DD53 /* NSString+CLURLEncoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+CLURLEncoding.h"; path = "Cloudinary/NSString+CLURLEncoding.h"; sourceTree = "<group>"; };
+		2E28C57F300BD607082894B4CF851841 /* UIButton+Haneke.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Haneke.m"; path = "Haneke/UIButton+Haneke.m"; sourceTree = "<group>"; };
+		3932C64A1EC0450AF8742DB37A910454 /* Cloudinary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Cloudinary.h; path = Cloudinary/Cloudinary.h; sourceTree = "<group>"; };
+		39BF83D9A42CB5DAE5FE4B0C37FF4E18 /* HNKDiskFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HNKDiskFetcher.h; path = Haneke/HNKDiskFetcher.h; sourceTree = "<group>"; };
+		3CD6FA897DAC13E572EF923BDCF6E6C5 /* CLLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CLLayer.m; path = Cloudinary/CLLayer.m; sourceTree = "<group>"; };
+		3D50922511CC9423E21204E9BDED02D5 /* HNKNetworkFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HNKNetworkFetcher.m; path = Haneke/HNKNetworkFetcher.m; sourceTree = "<group>"; };
+		3E0DB5B53DDD50BCC88DEF9FA37AA28D /* Pods-MJ-iOS-Toolkit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MJ-iOS-Toolkit-acknowledgements.plist"; sourceTree = "<group>"; };
+		3E13ECA064F25B033CB083DCF3EE8B69 /* NSString+CLURLEncoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+CLURLEncoding.m"; path = "Cloudinary/NSString+CLURLEncoding.m"; sourceTree = "<group>"; };
+		3E9E75D602AEDC2BA0411C21EC3AF01E /* UIImageView+Haneke.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+Haneke.h"; path = "Haneke/UIImageView+Haneke.h"; sourceTree = "<group>"; };
+		44DF38564CB2A2BD8F532D39E3E8589D /* CLEagerTransformation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLEagerTransformation.h; path = Cloudinary/CLEagerTransformation.h; sourceTree = "<group>"; };
+		575C889350F4747FA87F7C472523712E /* CLEagerTransformation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CLEagerTransformation.m; path = Cloudinary/CLEagerTransformation.m; sourceTree = "<group>"; };
+		5C77EEF4C13344F8A121B2AED46165C7 /* CLCloudinary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLCloudinary.h; path = Cloudinary/CLCloudinary.h; sourceTree = "<group>"; };
+		5D2DC910022B3313AC401B3113DBE585 /* CLLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLLayer.h; path = Cloudinary/CLLayer.h; sourceTree = "<group>"; };
+		5FD9D2CCFBAD4D754115730E0BEAB820 /* HNKDiskCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HNKDiskCache.m; path = Haneke/HNKDiskCache.m; sourceTree = "<group>"; };
+		6630E77EEAC94F5798FE81F8C3E4F21E /* NSDictionary+CLUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+CLUtilities.h"; path = "Cloudinary/NSDictionary+CLUtilities.h"; sourceTree = "<group>"; };
+		6B718D488A84E255E9E2196E1B1F2203 /* HNKDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HNKDiskCache.h; path = Haneke/HNKDiskCache.h; sourceTree = "<group>"; };
+		70E96299567B5A97A2B7D84B44B97999 /* Cloudinary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cloudinary-dummy.m"; sourceTree = "<group>"; };
+		7491FF617D2F7287D5805670BE7A2111 /* HNKCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HNKCache.h; path = Haneke/HNKCache.h; sourceTree = "<group>"; };
+		7C3770DCE99982E481883A2763656074 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		7F0F3BE0521F2CCEF6F85B0FAAB374D0 /* Pods-MJ-iOS-Toolkit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MJ-iOS-Toolkit-dummy.m"; sourceTree = "<group>"; };
+		84D8561E206AE311AC450D945B247D82 /* Haneke.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Haneke.xcconfig; sourceTree = "<group>"; };
+		882F78B9CF6A93E49CA54EE90DA3315D /* UIImageView+Haneke.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+Haneke.m"; path = "Haneke/UIImageView+Haneke.m"; sourceTree = "<group>"; };
+		92B0369482319515814C174FB591B5FA /* Haneke.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Haneke.h; path = Haneke/Haneke.h; sourceTree = "<group>"; };
+		961F6C1BFFE53DA6D3D7078ECFC21DA0 /* Cloudinary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cloudinary-prefix.pch"; sourceTree = "<group>"; };
+		9B24781DBA115B404594CCCCB12D7845 /* UIView+Haneke.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Haneke.m"; path = "Haneke/UIView+Haneke.m"; sourceTree = "<group>"; };
+		A09F1185FD50886B5715FC385F564468 /* CLTransformation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLTransformation.h; path = Cloudinary/CLTransformation.h; sourceTree = "<group>"; };
+		B390188C6B16EEBD1F25F26B13AD50A5 /* HNKSimpleFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HNKSimpleFetcher.m; path = Haneke/HNKSimpleFetcher.m; sourceTree = "<group>"; };
+		B4A3EA6DDD4E72A76E69B84D596C7AA6 /* HNKSimpleFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HNKSimpleFetcher.h; path = Haneke/HNKSimpleFetcher.h; sourceTree = "<group>"; };
+		B8F649FE659AFCECA9134AF444BC6691 /* Pods-MJ-iOS-Toolkit-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MJ-iOS-Toolkit-frameworks.sh"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C1203DAEADD05682BE298CAC9D697082 /* Pods-MJ-iOS-Toolkit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MJ-iOS-Toolkit-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C3013C6DF4A4948814E0F4B42DA72673 /* Pods-MJ-iOS-Toolkit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MJ-iOS-Toolkit.release.xcconfig"; sourceTree = "<group>"; };
+		C3124CC788BAFA6DB2518EA4070143AE /* CLCloudinary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CLCloudinary.m; path = Cloudinary/CLCloudinary.m; sourceTree = "<group>"; };
+		C6619EA680CD234E3CCF2F6982FE9795 /* CLUploader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CLUploader.m; path = Cloudinary/CLUploader.m; sourceTree = "<group>"; };
+		CB042A6AE789620D0409901D4F8238AC /* UIView+Haneke.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Haneke.h"; path = "Haneke/UIView+Haneke.h"; sourceTree = "<group>"; };
+		D11B84CBC9E915FC2DA40C79ABB54064 /* libPods-MJ-iOS-Toolkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MJ-iOS-Toolkit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1746674AD7598AD01D0393AA8B1283E /* HNKNetworkFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HNKNetworkFetcher.h; path = Haneke/HNKNetworkFetcher.h; sourceTree = "<group>"; };
+		D4DFEC563927C74A72643EAA962EC5C1 /* CLUploader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLUploader.h; path = Cloudinary/CLUploader.h; sourceTree = "<group>"; };
+		D7B4C2D1D60DEB089040DAB79E6C2ED1 /* Haneke-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Haneke-dummy.m"; sourceTree = "<group>"; };
+		DE7212542DD93C9860F16179101AAAFA /* HNKDiskFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HNKDiskFetcher.m; path = Haneke/HNKDiskFetcher.m; sourceTree = "<group>"; };
+		E21F011383B6D80F5FE5CC54C1D988E2 /* Cloudinary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cloudinary.xcconfig; sourceTree = "<group>"; };
+		E2E6A8A1493DACA151FEC278877957E8 /* libHaneke.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHaneke.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E68B78471FD13047A21010AD031AE207 /* Pods-MJ-iOS-Toolkit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MJ-iOS-Toolkit-resources.sh"; sourceTree = "<group>"; };
+		E8C9C39C7D2D6CE8EA1E97CCBC38030C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E9427CFF9740776DC689B9056DCB96B4 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		FD74854186C88C99B8E2234FB0B9105D /* Pods-MJ-iOS-Toolkit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MJ-iOS-Toolkit.debug.xcconfig"; sourceTree = "<group>"; };
+		FE2BD82B0E815D84B76183969CE2985C /* UIButton+Haneke.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+Haneke.h"; path = "Haneke/UIButton+Haneke.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		434593B78A5E5FB2CB649F3568085239 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8474F646BBDB7DDD6B839081DD8BCFCD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0BDCFA09F11B098775D7CE72680C8F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B0F5778FB307DFECD6C66AF9CCA9867 /* Foundation.framework in Frameworks */,
+				EC8EF14355F45667A3D9D2755E563252 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0DF01DA99432CBF37DF39D7BEE322A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AE9AF65D645E51AB73EB6C1DA111CA0 /* Foundation.framework in Frameworks */,
+				5F9CE9A8FFD385CB5640B1B4DB84F952 /* ImageIO.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5F67A5C5F8F96F41273B767D5C8F24F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1CC9BB7A9BA08A24BEE7AF14E740BC82 /* Cloudinary */ = {
+			isa = PBXGroup;
+			children = (
+				5C77EEF4C13344F8A121B2AED46165C7 /* CLCloudinary.h */,
+				C3124CC788BAFA6DB2518EA4070143AE /* CLCloudinary.m */,
+				44DF38564CB2A2BD8F532D39E3E8589D /* CLEagerTransformation.h */,
+				575C889350F4747FA87F7C472523712E /* CLEagerTransformation.m */,
+				5D2DC910022B3313AC401B3113DBE585 /* CLLayer.h */,
+				3CD6FA897DAC13E572EF923BDCF6E6C5 /* CLLayer.m */,
+				3932C64A1EC0450AF8742DB37A910454 /* Cloudinary.h */,
+				A09F1185FD50886B5715FC385F564468 /* CLTransformation.h */,
+				0C70C626080FBB6E478C33DA726159A5 /* CLTransformation.m */,
+				D4DFEC563927C74A72643EAA962EC5C1 /* CLUploader.h */,
+				C6619EA680CD234E3CCF2F6982FE9795 /* CLUploader.m */,
+				6630E77EEAC94F5798FE81F8C3E4F21E /* NSDictionary+CLUtilities.h */,
+				14117D50F7588F4F09D0DC0FAD5F1A71 /* NSDictionary+CLUtilities.m */,
+				2067F46773EA1FB6ABF1BEF40DB6DD53 /* NSString+CLURLEncoding.h */,
+				3E13ECA064F25B033CB083DCF3EE8B69 /* NSString+CLURLEncoding.m */,
+				CCADFDB838393174C0E3EAEDA6E498EE /* Support Files */,
+			);
+			path = Cloudinary;
+			sourceTree = "<group>";
+		};
+		2FE2079B9E60F2562A13BF9949DEC009 /* Haneke */ = {
+			isa = PBXGroup;
+			children = (
+				92B0369482319515814C174FB591B5FA /* Haneke.h */,
+				7491FF617D2F7287D5805670BE7A2111 /* HNKCache.h */,
+				03093EFE0512EBCEF723429B6A418302 /* HNKCache.m */,
+				6B718D488A84E255E9E2196E1B1F2203 /* HNKDiskCache.h */,
+				5FD9D2CCFBAD4D754115730E0BEAB820 /* HNKDiskCache.m */,
+				39BF83D9A42CB5DAE5FE4B0C37FF4E18 /* HNKDiskFetcher.h */,
+				DE7212542DD93C9860F16179101AAAFA /* HNKDiskFetcher.m */,
+				D1746674AD7598AD01D0393AA8B1283E /* HNKNetworkFetcher.h */,
+				3D50922511CC9423E21204E9BDED02D5 /* HNKNetworkFetcher.m */,
+				B4A3EA6DDD4E72A76E69B84D596C7AA6 /* HNKSimpleFetcher.h */,
+				B390188C6B16EEBD1F25F26B13AD50A5 /* HNKSimpleFetcher.m */,
+				FE2BD82B0E815D84B76183969CE2985C /* UIButton+Haneke.h */,
+				2E28C57F300BD607082894B4CF851841 /* UIButton+Haneke.m */,
+				3E9E75D602AEDC2BA0411C21EC3AF01E /* UIImageView+Haneke.h */,
+				882F78B9CF6A93E49CA54EE90DA3315D /* UIImageView+Haneke.m */,
+				CB042A6AE789620D0409901D4F8238AC /* UIView+Haneke.h */,
+				9B24781DBA115B404594CCCCB12D7845 /* UIView+Haneke.m */,
+				3486285AFBAA4EE562DBF92FF7AC54E4 /* Support Files */,
+			);
+			path = Haneke;
+			sourceTree = "<group>";
+		};
+		3486285AFBAA4EE562DBF92FF7AC54E4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				84D8561E206AE311AC450D945B247D82 /* Haneke.xcconfig */,
+				D7B4C2D1D60DEB089040DAB79E6C2ED1 /* Haneke-dummy.m */,
+				14FFDB9E5733879BEE146365FD7087B1 /* Haneke-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Haneke";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				EDA18FEAE298941D2E8D7DCA86D79EAC /* Pods */,
+				FA93494A87F34CCC217AC75FD50C12C7 /* Products */,
+				EDDA625188D1A45E6392847FB0C9E60D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		C5F67A5C5F8F96F41273B767D5C8F24F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E8C9C39C7D2D6CE8EA1E97CCBC38030C /* Foundation.framework */,
+				E9427CFF9740776DC689B9056DCB96B4 /* ImageIO.framework */,
+				7C3770DCE99982E481883A2763656074 /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CCADFDB838393174C0E3EAEDA6E498EE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E21F011383B6D80F5FE5CC54C1D988E2 /* Cloudinary.xcconfig */,
+				70E96299567B5A97A2B7D84B44B97999 /* Cloudinary-dummy.m */,
+				961F6C1BFFE53DA6D3D7078ECFC21DA0 /* Cloudinary-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Cloudinary";
+			sourceTree = "<group>";
+		};
+		EDA18FEAE298941D2E8D7DCA86D79EAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1CC9BB7A9BA08A24BEE7AF14E740BC82 /* Cloudinary */,
+				2FE2079B9E60F2562A13BF9949DEC009 /* Haneke */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EDDA625188D1A45E6392847FB0C9E60D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1141DD3C4066A2DF5E390DB92607A05 /* Pods-MJ-iOS-Toolkit */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F1141DD3C4066A2DF5E390DB92607A05 /* Pods-MJ-iOS-Toolkit */ = {
+			isa = PBXGroup;
+			children = (
+				C1203DAEADD05682BE298CAC9D697082 /* Pods-MJ-iOS-Toolkit-acknowledgements.markdown */,
+				3E0DB5B53DDD50BCC88DEF9FA37AA28D /* Pods-MJ-iOS-Toolkit-acknowledgements.plist */,
+				7F0F3BE0521F2CCEF6F85B0FAAB374D0 /* Pods-MJ-iOS-Toolkit-dummy.m */,
+				B8F649FE659AFCECA9134AF444BC6691 /* Pods-MJ-iOS-Toolkit-frameworks.sh */,
+				E68B78471FD13047A21010AD031AE207 /* Pods-MJ-iOS-Toolkit-resources.sh */,
+				FD74854186C88C99B8E2234FB0B9105D /* Pods-MJ-iOS-Toolkit.debug.xcconfig */,
+				C3013C6DF4A4948814E0F4B42DA72673 /* Pods-MJ-iOS-Toolkit.release.xcconfig */,
+			);
+			name = "Pods-MJ-iOS-Toolkit";
+			path = "Target Support Files/Pods-MJ-iOS-Toolkit";
+			sourceTree = "<group>";
+		};
+		FA93494A87F34CCC217AC75FD50C12C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				087A37FA027C9C385A3D7A1D7985DA0B /* libCloudinary.a */,
+				E2E6A8A1493DACA151FEC278877957E8 /* libHaneke.a */,
+				D11B84CBC9E915FC2DA40C79ABB54064 /* libPods-MJ-iOS-Toolkit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A34FE0B73C6C3075054FC8B5F3F9321D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				065B10D0B40E19F1817AEA0020A2FA54 /* CLCloudinary.h in Headers */,
+				A1807526A1D7CB1ECEEC0C4D04DCBE8A /* CLEagerTransformation.h in Headers */,
+				7F713FE55332FF197358CB90BF92855E /* CLLayer.h in Headers */,
+				B4520B73CAF1B1A85251376BF83A7BF9 /* Cloudinary.h in Headers */,
+				0F514EA67D9AA62900F3BBA78AAFDDCC /* CLTransformation.h in Headers */,
+				C901C1FE7F64DD9F4FD2EA9017605DD1 /* CLUploader.h in Headers */,
+				2A9688D1785E30ABDDD3CD55F27B8308 /* NSDictionary+CLUtilities.h in Headers */,
+				6F3FB006CA15FA52805893EEF235A198 /* NSString+CLURLEncoding.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA7F9CBC67F7F8E341D611AE8624A84 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D497D77CA75C7ED1C93148751D62C6D /* Haneke.h in Headers */,
+				348A46D8F0FEA24B64CD83DD2F8744BB /* HNKCache.h in Headers */,
+				7544D815E4DF68B6EDC419F6FBF94F8E /* HNKDiskCache.h in Headers */,
+				0A6CBF0777487D81759CBE849EC30025 /* HNKDiskFetcher.h in Headers */,
+				4234B9D435D573EC4430642B082CBC9C /* HNKNetworkFetcher.h in Headers */,
+				04A82C6E681F3AA2C70B966771B8BF95 /* HNKSimpleFetcher.h in Headers */,
+				227ED1532CC5C3F6AEB0A79149D85466 /* UIButton+Haneke.h in Headers */,
+				4288C1B73C8AF6C2FBA557FC26139285 /* UIImageView+Haneke.h in Headers */,
+				FA59B50473A72ABD9085DBD803329364 /* UIView+Haneke.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		369B2BCC31DAE9E8DB0F82A02F1061FE /* Cloudinary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F28FE18C86C0A570987831973D58B42F /* Build configuration list for PBXNativeTarget "Cloudinary" */;
+			buildPhases = (
+				CCF64FED28938300A119B7E344B3A899 /* Sources */,
+				A0BDCFA09F11B098775D7CE72680C8F1 /* Frameworks */,
+				A34FE0B73C6C3075054FC8B5F3F9321D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cloudinary;
+			productName = Cloudinary;
+			productReference = 087A37FA027C9C385A3D7A1D7985DA0B /* libCloudinary.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6E7D726ADA8D51194A8E9EDBDECCADF6 /* Haneke */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EA2B4B72D2CDDDA1B88F74471D6C193 /* Build configuration list for PBXNativeTarget "Haneke" */;
+			buildPhases = (
+				4086DC97E393F5C744BA7B0ED2D63AF7 /* Sources */,
+				F0DF01DA99432CBF37DF39D7BEE322A8 /* Frameworks */,
+				ADA7F9CBC67F7F8E341D611AE8624A84 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Haneke;
+			productName = Haneke;
+			productReference = E2E6A8A1493DACA151FEC278877957E8 /* libHaneke.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FE719D47F1C6366F1BE9F4DC9C136FFD /* Pods-MJ-iOS-Toolkit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F32588E90B8CC9F2FB981ADA68BEA3DF /* Build configuration list for PBXNativeTarget "Pods-MJ-iOS-Toolkit" */;
+			buildPhases = (
+				97D9C3863BEC611765B5D1D0FF60026D /* Sources */,
+				434593B78A5E5FB2CB649F3568085239 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4ABB49022F89032C02782F86F9F39720 /* PBXTargetDependency */,
+				010FDDC61DC6900552EE650D3493CF14 /* PBXTargetDependency */,
+			);
+			name = "Pods-MJ-iOS-Toolkit";
+			productName = "Pods-MJ-iOS-Toolkit";
+			productReference = D11B84CBC9E915FC2DA40C79ABB54064 /* libPods-MJ-iOS-Toolkit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = FA93494A87F34CCC217AC75FD50C12C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				369B2BCC31DAE9E8DB0F82A02F1061FE /* Cloudinary */,
+				6E7D726ADA8D51194A8E9EDBDECCADF6 /* Haneke */,
+				FE719D47F1C6366F1BE9F4DC9C136FFD /* Pods-MJ-iOS-Toolkit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4086DC97E393F5C744BA7B0ED2D63AF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13A2F50C9188628838F00BF0CE319133 /* Haneke-dummy.m in Sources */,
+				DD0BED545D34FE09DBA5E432D8498928 /* HNKCache.m in Sources */,
+				94765EE3F5744C114633C358B618A488 /* HNKDiskCache.m in Sources */,
+				268D9F192CA2C521493925567E825350 /* HNKDiskFetcher.m in Sources */,
+				203B461B17F0984D940D4C4031C5C0A5 /* HNKNetworkFetcher.m in Sources */,
+				C400F80DA96706132F045363B7F341E9 /* HNKSimpleFetcher.m in Sources */,
+				3796DBF879F599E80E2ADB9FB8513B13 /* UIButton+Haneke.m in Sources */,
+				1972D9D133B0020FCCDBD966FFA5BBBD /* UIImageView+Haneke.m in Sources */,
+				7BAB111C08E0AEF4C57B0E6830C62E27 /* UIView+Haneke.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97D9C3863BEC611765B5D1D0FF60026D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E249C629E3C86698C2C12687BA430FFE /* Pods-MJ-iOS-Toolkit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCF64FED28938300A119B7E344B3A899 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DA61A1A1D65FEE556E52500302FEBA2 /* CLCloudinary.m in Sources */,
+				40495CF3FBCA997B76F19FF30F3B5927 /* CLEagerTransformation.m in Sources */,
+				619674BC51DE1C998B957EE8072CD81E /* CLLayer.m in Sources */,
+				62EF8647D599EFE469C1F8505CC937BD /* Cloudinary-dummy.m in Sources */,
+				31206BC956C2E3DBE2863DEB4000B53E /* CLTransformation.m in Sources */,
+				17273D359998B79F793A0A1A4EBE5F43 /* CLUploader.m in Sources */,
+				E32932CC68847E088D10EE59236F17E3 /* NSDictionary+CLUtilities.m in Sources */,
+				3CA8B7433E1AA567172EBC59AA586950 /* NSString+CLURLEncoding.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		010FDDC61DC6900552EE650D3493CF14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Haneke;
+			target = 6E7D726ADA8D51194A8E9EDBDECCADF6 /* Haneke */;
+			targetProxy = 514807D25EF662215BB062E1CAC7B2EC /* PBXContainerItemProxy */;
+		};
+		4ABB49022F89032C02782F86F9F39720 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cloudinary;
+			target = 369B2BCC31DAE9E8DB0F82A02F1061FE /* Cloudinary */;
+			targetProxy = 87CDB03A0AF5F8A8DE6FA6D1DBFE2336 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0783A5A9FD8E485A245D8B573A979CB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84D8561E206AE311AC450D945B247D82 /* Haneke.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Haneke/Haneke-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		16E043D0FBBDC18BA6519E6BCAC7A584 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84D8561E206AE311AC450D945B247D82 /* Haneke.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Haneke/Haneke-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3916FB66FE435413338ECB485DE7C810 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E21F011383B6D80F5FE5CC54C1D988E2 /* Cloudinary.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cloudinary/Cloudinary-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		721D57BD0BFDDF17A12C4B72DA3DCDD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E21F011383B6D80F5FE5CC54C1D988E2 /* Cloudinary.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cloudinary/Cloudinary-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74D6F19180E45B385EAC2C82AE448B55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD74854186C88C99B8E2234FB0B9105D /* Pods-MJ-iOS-Toolkit.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		877CC4819D151469B5E17713EF107919 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3013C6DF4A4948814E0F4B42DA72673 /* Pods-MJ-iOS-Toolkit.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
+				74857149DC1E0D599B8A01A78349A926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EA2B4B72D2CDDDA1B88F74471D6C193 /* Build configuration list for PBXNativeTarget "Haneke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16E043D0FBBDC18BA6519E6BCAC7A584 /* Debug */,
+				0783A5A9FD8E485A245D8B573A979CB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F28FE18C86C0A570987831973D58B42F /* Build configuration list for PBXNativeTarget "Cloudinary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				721D57BD0BFDDF17A12C4B72DA3DCDD4 /* Debug */,
+				3916FB66FE435413338ECB485DE7C810 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F32588E90B8CC9F2FB981ADA68BEA3DF /* Build configuration list for PBXNativeTarget "Pods-MJ-iOS-Toolkit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74D6F19180E45B385EAC2C82AE448B55 /* Debug */,
+				877CC4819D151469B5E17713EF107919 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

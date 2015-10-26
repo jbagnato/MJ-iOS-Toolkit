@@ -82,6 +82,21 @@
     return [string copy];
 }
 
++ (nonnull NSString*)add_stringWithComponents:(nonnull NSArray<NSString*>*)compontents joinedWithString:(nullable NSString*)string
+{
+    NSMutableString *str = [[NSMutableString alloc] init];
+    
+    for (NSInteger index = 0; index<compontents.count; ++index)
+    {
+        NSString *cmpt = compontents[index];
+        [str appendString:cmpt];
+        if (index < compontents.count - 1)
+            [str appendString:string];
+    }
+    
+    return [str copy];
+}
+
 @end
 
 @implementation NSAttributedString (Additions)

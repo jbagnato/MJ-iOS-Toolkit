@@ -1,0 +1,13 @@
+PODS:
+  - Cloudinary (1.0.14)
+  - Haneke (1.0.1)
+
+DEPENDENCIES:
+  - Cloudinary (~> 1.0)
+  - Haneke (~> 1.0)
+
+SPEC CHECKSUMS:
+  Cloudinary: b07e14313bcc3a47418ea47e1c4020cb70518446
+  Haneke: d60be8b96b228633b24708dd153169d6849d6f78
+
+COCOAPODS: 0.39.0

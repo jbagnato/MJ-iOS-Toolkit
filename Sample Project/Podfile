@@ -1,0 +1,23 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+# use_frameworks!
+
+inhibit_all_warnings!
+
+target 'MJ-iOS-Toolkit' do
+  
+# Image caching
+pod 'Haneke', '~> 1.0'
+pod 'Cloudinary', '~> 1.0'
+
+end
+
+target 'MJ-iOS-ToolkitTests' do
+
+end
+
+target 'MJ-iOS-ToolkitUITests' do
+
+end
+
