@@ -17,15 +17,45 @@
 #import <UIKit/UIKit.h>
 
 /**
- * Additions on UIBarButtonItem
+ * Additions on UIBarButtonItem.
  **/
 @interface UIBarButtonItem (Additions)
 
+/**
+ * Flexible space item.
+ **/
 + (UIBarButtonItem*)add_flexibleSpaceItem;
+
+/**
+ * Fixed space item.
+ **/
 + (UIBarButtonItem*)add_fixedSpaceItem;
 
+/**
+ * Initializes a new item using the specified image and other properties.
+ * @param image The image
+ * @param style The style
+ * @param block The action block.
+ * @return An initialized instance.
+ **/
 + (__kindof UIBarButtonItem *)add_barButtonWithImage:(UIImage *)image style:(UIBarButtonItemStyle)style actionBlock:(void (^)(id sender))block;
+
+/**
+ * Initializes a new item using the specified title and other properties.
+ * @param title The title
+ * @param style The style
+ * @param block The action block.
+ * @return An initialized instance.
+ **/
 + (__kindof UIBarButtonItem *)add_barButtonWithTitle:(NSString *)title style:(UIBarButtonItemStyle)style actionBlock:(void (^)(id sender))block;
+
+/**
+ * Initializes a new item containing the specified system item.
+ * @param systemItem The sytem item value.
+ * @param style The style
+ * @param block The action block.
+ * @return An initialized instance.
+ **/
 + (__kindof UIBarButtonItem *)add_barButtonWithBarButtonSystemItem:(UIBarButtonSystemItem)systemItem actionBlock:(void (^)(id sender))block;
 
 @end

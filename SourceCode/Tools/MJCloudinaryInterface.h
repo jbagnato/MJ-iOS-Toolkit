@@ -16,37 +16,37 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, MJImageCropMode)
+typedef NS_ENUM(NSUInteger, MJCloudinaryImageCropMode)
 {
-    MJImageCropModeScaleToFill       = UIViewContentModeScaleToFill,
-    MJImageCropModeScaleAspectFit    = UIViewContentModeScaleAspectFit,
-    MJImageCropModeScaleAspectFill   = UIViewContentModeScaleAspectFill,
-    MJImageCropModeCenter            = UIViewContentModeCenter,
-    MJImageCropModeTop               = UIViewContentModeTop,
-    MJImageCropModeBottom            = UIViewContentModeBottom,
-    MJImageCropModeLeft              = UIViewContentModeLeft,
-    MJImageCropModeRight             = UIViewContentModeRight,
-    MJImageCropModeTopLeft           = UIViewContentModeTopLeft,
-    MJImageCropModeTopRight          = UIViewContentModeTopRight,
-    MJImageCropModeBottomLeft        = UIViewContentModeBottomLeft,
-    MJImageCropModeBottomRight       = UIViewContentModeBottomRight,
-    MJImageCropModeFace              = 1000000,
-    MJImageCropModeFaces             = 1000001,
+    MJCloudinaryImageCropModeScaleToFill       = UIViewContentModeScaleToFill,
+    MJCloudinaryImageCropModeScaleAspectFit    = UIViewContentModeScaleAspectFit,
+    MJCloudinaryImageCropModeScaleAspectFill   = UIViewContentModeScaleAspectFill,
+    MJCloudinaryImageCropModeCenter            = UIViewContentModeCenter,
+    MJCloudinaryImageCropModeTop               = UIViewContentModeTop,
+    MJCloudinaryImageCropModeBottom            = UIViewContentModeBottom,
+    MJCloudinaryImageCropModeLeft              = UIViewContentModeLeft,
+    MJCloudinaryImageCropModeRight             = UIViewContentModeRight,
+    MJCloudinaryImageCropModeTopLeft           = UIViewContentModeTopLeft,
+    MJCloudinaryImageCropModeTopRight          = UIViewContentModeTopRight,
+    MJCloudinaryImageCropModeBottomLeft        = UIViewContentModeBottomLeft,
+    MJCloudinaryImageCropModeBottomRight       = UIViewContentModeBottomRight,
+    MJCloudinaryImageCropModeFace              = 1000000,
+    MJCloudinaryImageCropModeFaces             = 1000001,
 };
 
-typedef NSString MJImageFileFormat;
+typedef NSString MJCloudinaryImageFileFormat;
 
-extern MJImageFileFormat * const MJImageFileFormatPNG;
-extern MJImageFileFormat * const MJImageFileFormatJPG;
-extern MJImageFileFormat * const MJImageFileFormatGIF;
-extern MJImageFileFormat * const MJImageFileFormatBMP;
-extern MJImageFileFormat * const MJImageFileFormatTIFF;
-extern MJImageFileFormat * const MJImageFileFormatICO;
-extern MJImageFileFormat * const MJImageFileFormatPDF;
-extern MJImageFileFormat * const MJImageFileFormatEPS;
-extern MJImageFileFormat * const MJImageFileFormatPSD;
-extern MJImageFileFormat * const MJImageFileFormatSVG;
-extern MJImageFileFormat * const MJImageFileFormatWEBP;
+extern MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatPNG;
+extern MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatJPG;
+extern MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatGIF;
+extern MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatBMP;
+extern MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatTIFF;
+extern MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatICO;
+extern MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatPDF;
+extern MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatEPS;
+extern MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatPSD;
+extern MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatSVG;
+extern MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatWEBP;
 
 /**
  * Use this value as a corner radius parameter to indicate that the output image must have the bigger radius possible (squared images would becom round).
@@ -56,7 +56,7 @@ extern CGFloat const MJImageRadiusMax;
 /**
  * Return the equivalent crop mode form a content mode value.
  **/
-FOUNDATION_EXTERN MJImageCropMode MJImageCropModeFromUIViewContentMode(UIViewContentMode contentMode);
+FOUNDATION_EXTERN MJCloudinaryImageCropMode MJCloudinaryImageCropModeFromUIViewContentMode(UIViewContentMode contentMode);
 
 /**
  * Generates URLS for the image keys.
@@ -94,14 +94,14 @@ FOUNDATION_EXTERN MJImageCropMode MJImageCropModeFromUIViewContentMode(UIViewCon
 @property (nonatomic, readwrite) NSString *apiSecret;
 
 /**
- * The file format of the image to fetch. Default value is `MJImageFileFormatJPG`.
+ * The file format of the image to fetch. Default value is `MJCloudinaryImageFileFormatJPG`.
  **/
-@property (nonatomic, strong) MJImageFileFormat *fileFormat;
+@property (nonatomic, strong) MJCloudinaryImageFileFormat *fileFormat;
 
 /**
- * The file format of the image to fetch when a corner radius is defined. Default value is `MJImageFileFormatPNG`.
+ * The file format of the image to fetch when a corner radius is defined. Default value is `MJCloudinaryImageFileFormatPNG`.
  **/
-@property (nonatomic, strong) MJImageFileFormat *radiusFileFormat;
+@property (nonatomic, strong) MJCloudinaryImageFileFormat *radiusFileFormat;
 
 /** *************************************************** **
  * @name Uploading images
@@ -148,7 +148,7 @@ FOUNDATION_EXTERN MJImageCropMode MJImageCropModeFromUIViewContentMode(UIViewCon
  **/
 - (NSURL*)URLForImageKey:(NSString*)imageKey
                     size:(CGSize)size
-                cropMode:(MJImageCropMode)cropMode
+                cropMode:(MJCloudinaryImageCropMode)cropMode
                   radius:(CGFloat)radius;
 
 /**
@@ -162,7 +162,7 @@ FOUNDATION_EXTERN MJImageCropMode MJImageCropModeFromUIViewContentMode(UIViewCon
 - (NSURL*)URLForImageKey:(NSString*)imageKey
                     size:(CGSize)size
                    scale:(CGFloat)scale
-                cropMode:(MJImageCropMode)cropMode radius:(CGFloat)radius;
+                cropMode:(MJCloudinaryImageCropMode)cropMode radius:(CGFloat)radius;
 
 /**
  * Returns the default image.
@@ -177,7 +177,7 @@ FOUNDATION_EXTERN MJImageCropMode MJImageCropModeFromUIViewContentMode(UIViewCon
 - (NSURL*)URLForImageKey:(NSString*)imageKey
         pretransformCrop:(CGRect)pretransformCropRect
                     size:(CGSize)size scale:(CGFloat)scale
-                cropMode:(MJImageCropMode)cropMode
+                cropMode:(MJCloudinaryImageCropMode)cropMode
                   radius:(CGFloat)radius;
 
 /** *************************************************** **
@@ -188,68 +188,5 @@ FOUNDATION_EXTERN MJImageCropMode MJImageCropModeFromUIViewContentMode(UIViewCon
  * Enable debug logs. Default value is NO.
  **/
 @property (nonatomic, assign) BOOL enableDebugLogs;
-
-@end
-
-#pragma mark - UIImageView Extensions
-
-/**
- * UIImageView extension for MJCloudinaryInterface to load images with Haneke.
- **/
-@interface UIImageView (MJCloudinaryInterface)
-
-/** *************************************************** **
- * @name Configuring the instance
- ** *************************************************** **/
-
-/**
-* The used `MJCloudinaryInterface` instance. Default value is nil.
-* @return The used MJCloudinaryInterface. Can be nil.
-* @discussion If nil, the `defaultInstance` is used.
-**/
-@property (nonatomic, weak, setter=mjz_setCloudinaryInterface:) MJCloudinaryInterface *mjz_cloudinaryInterface UI_APPEARANCE_SELECTOR;
-
-/**
- * The image crop mode. For example, to run a face detection set it to `MJImageCropModeFace`.
- * @discussion If not manually defined, the image crop mode will be corresponding imageView's contentMode.
- **/
-@property (nonatomic, assign, setter=mjz_setImageCropMode:) MJImageCropMode mjz_imageCropMode;
-
-/** *************************************************** **
- * @name Setting images
- ** *************************************************** **/
-
-- (void)mjz_setImageFromImageKey:(NSString*)imageKey;
-
-- (void)mjz_setImageFromImageKey:(NSString*)imageKey radius:(CGFloat)radius;
-
-- (void)mjz_setImageFromImageKey:(NSString*)imageKey placeholder:(UIImage*)placeholder;
-
-- (void)mjz_setImageFromImageKey:(NSString*)imageKey
-                          radius:(CGFloat)radius
-                     placeholder:(UIImage*)placeholder;
-
-- (void)mjz_setImageFromImageKey:(NSString*)imageKey
-                pretransformCrop:(CGRect)pretransformCrop
-                          radius:(CGFloat)radius
-                     placeholder:(UIImage*)placeholder;
-
-- (void)mjz_setImageFromImageKey:(NSString*)imageKey
-                     placeholder:(UIImage*)placeholder
-                         success:(void (^)(UIImage *image))successBlock
-                         failure:(void (^)(NSError *error))failureBlock;
-
-- (void)mjz_setImageFromImageKey:(NSString*)imageKey
-                          radius:(CGFloat)radius
-                     placeholder:(UIImage*)placeholder
-                         success:(void (^)(UIImage *image))successBlock
-                         failure:(void (^)(NSError *error))failureBlock;
-
-- (void)mjz_setImageFromImageKey:(NSString*)imageKey
-                pretransformCrop:(CGRect)pretransformCrop
-                          radius:(CGFloat)radius
-                     placeholder:(UIImage*)placeholder
-                         success:(void (^)(UIImage *image))successBlock
-                         failure:(void (^)(NSError *error))failureBlock;
 
 @end

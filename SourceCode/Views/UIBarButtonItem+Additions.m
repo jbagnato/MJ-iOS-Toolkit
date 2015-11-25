@@ -57,9 +57,7 @@
     void (^block)(id sender) = objc_getAssociatedObject(self, @selector(add_barButtonItemAction:));
     
     if (block)
-    {
         block(sender);
-    }
 }
 
 @end

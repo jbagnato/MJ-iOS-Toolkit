@@ -62,26 +62,16 @@
     }
 }
 
-- (void)completedTaskWithKey:(NSString*)key object:(id)object
+- (void)completeTaskWithKey:(NSString*)key object:(id)object succeed:(BOOL)succeed
 {
     @synchronized(self)
     {
         [_pendingTasks removeObject:key];
-        [_completedTasks addObject:key];
         
-        if (object)
-            [_objects setObject:object forKey:key];
-        
-        [self mjz_checkTaskDispatchCompletion];
-    }
-}
-
-- (void)failedTaskWithKey:(NSString*)key object:(id)object
-{
-    @synchronized(self)
-    {
-        [_pendingTasks removeObject:key];
-        [_failedTasks addObject:key];
+        if (succeed)
+            [_completedTasks addObject:key];
+        else
+            [_failedTasks addObject:key];
         
         if (object)
             [_objects setObject:object forKey:key];
@@ -92,17 +82,10 @@
 
 - (void)completeAllPendingTasks
 {
-    [self completeAllPendingTasksWithObject:nil];
-}
-
-- (void)completeAllPendingTasksWithObject:(id)object
-{
     @synchronized(self)
     {
         [_pendingTasks.allObjects enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [_completedTasks addObject:obj];
-            if (object)
-                [_objects setObject:object forKey:obj];
         }];
         [_pendingTasks removeAllObjects];
         
@@ -112,17 +95,10 @@
 
 - (void)failAllPendingTasks
 {
-    [self failAllPendingTasksWithObject:nil];
-}
-
-- (void)failAllPendingTasksWithObject:(id)object
-{
     @synchronized(self)
     {
         [_pendingTasks.allObjects enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [_failedTasks addObject:obj];
-            if (object)
-                [_objects setObject:object forKey:obj];
         }];
         [_pendingTasks removeAllObjects];
         
@@ -155,6 +131,12 @@
             [_observers.allObjects enumerateObjectsUsingBlock:^(id<MJTaskDispatcherObserver> _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 if ([obj respondsToSelector:@selector(dispatcher:didCompleteTasks:failedTasks:objects:)])
                     [obj dispatcher:self didCompleteTasks:completedTasks failedTasks:failedTasks objects:objects];
+                
+                if ([obj respondsToSelector:@selector(dispatcher:didFailTasks:objects:)])
+                    [obj dispatcher:self didFailTasks:failedTasks objects:objects];
+                
+                if ([obj respondsToSelector:@selector(dispatcher:didCompleteTasks:objects:)])
+                    [obj dispatcher:self didCompleteTasks:completedTasks objects:objects];
             }];
         }
     }

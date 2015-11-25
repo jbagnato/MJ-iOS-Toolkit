@@ -16,25 +16,23 @@
 
 #import "MJCloudinaryInterface.h"
 
-#import <objc/runtime.h>
-#import <Haneke/Haneke.h>
 #import <Cloudinary/Cloudinary.h>
 
 // Cloudinary Image Transformations: http://cloudinary.com/documentation/image_transformations
 
 CGFloat const MJImageRadiusMax = CGFLOAT_MAX;
 
-MJImageFileFormat * const MJImageFileFormatPNG = @"png";
-MJImageFileFormat * const MJImageFileFormatJPG = @"jpg";
-MJImageFileFormat * const MJImageFileFormatGIF = @"gif";
-MJImageFileFormat * const MJImageFileFormatBMP = @"bmp";
-MJImageFileFormat * const MJImageFileFormatTIFF = @"tiff";
-MJImageFileFormat * const MJImageFileFormatICO = @"ico";
-MJImageFileFormat * const MJImageFileFormatPDF = @"pdf";
-MJImageFileFormat * const MJImageFileFormatEPS = @"eps";
-MJImageFileFormat * const MJImageFileFormatPSD = @"psd";
-MJImageFileFormat * const MJImageFileFormatSVG = @"svg";
-MJImageFileFormat * const MJImageFileFormatWEBP = @"webp";
+MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatPNG = @"png";
+MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatJPG = @"jpg";
+MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatGIF = @"gif";
+MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatBMP = @"bmp";
+MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatTIFF = @"tiff";
+MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatICO = @"ico";
+MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatPDF = @"pdf";
+MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatEPS = @"eps";
+MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatPSD = @"psd";
+MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatSVG = @"svg";
+MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatWEBP = @"webp";
 
 @implementation MJCloudinaryInterface
 {
@@ -58,8 +56,8 @@ MJImageFileFormat * const MJImageFileFormatWEBP = @"webp";
     if (self)
     {
         _cloudinary = [[CLCloudinary alloc] init];
-        _fileFormat = MJImageFileFormatJPG;
-        _radiusFileFormat = MJImageFileFormatPNG;
+        _fileFormat = MJCloudinaryImageFileFormatJPG;
+        _radiusFileFormat = MJCloudinaryImageFileFormatPNG;
     }
     return self;
 }
@@ -174,12 +172,12 @@ MJImageFileFormat * const MJImageFileFormatWEBP = @"webp";
     return [NSURL URLWithString:url];
 }
 
-- (NSURL*)URLForImageKey:(NSString*)imageKey size:(CGSize)size cropMode:(MJImageCropMode)cropMode radius:(CGFloat)radius;
+- (NSURL*)URLForImageKey:(NSString*)imageKey size:(CGSize)size cropMode:(MJCloudinaryImageCropMode)cropMode radius:(CGFloat)radius;
 {
     return [self URLForImageKey:imageKey size:size scale:[[UIScreen mainScreen] scale] cropMode:cropMode radius:radius];
 }
 
-- (NSURL*)URLForImageKey:(NSString*)imageKey size:(CGSize)size scale:(CGFloat)scale cropMode:(MJImageCropMode)cropMode radius:(CGFloat)radius;
+- (NSURL*)URLForImageKey:(NSString*)imageKey size:(CGSize)size scale:(CGFloat)scale cropMode:(MJCloudinaryImageCropMode)cropMode radius:(CGFloat)radius;
 {
     if (imageKey == nil)
         return nil;
@@ -206,7 +204,7 @@ MJImageFileFormat * const MJImageFileFormatWEBP = @"webp";
         pretransformCrop:(CGRect)pretransformCropRect
                     size:(CGSize)size
                    scale:(CGFloat)scale
-                cropMode:(MJImageCropMode)cropMode
+                cropMode:(MJCloudinaryImageCropMode)cropMode
                   radius:(CGFloat)radius;
 {
     if (imageKey == nil)
@@ -246,7 +244,7 @@ MJImageFileFormat * const MJImageFileFormatWEBP = @"webp";
 
 #pragma mark Private Methods
 
-- (CLTransformation*)mjz_transformationForSize:(CGSize)size scale:(CGFloat)scale cropMode:(MJImageCropMode)cropMode radius:(CGFloat)radius
+- (CLTransformation*)mjz_transformationForSize:(CGSize)size scale:(CGFloat)scale cropMode:(MJCloudinaryImageCropMode)cropMode radius:(CGFloat)radius
 {
     CLTransformation *transformation = [CLTransformation transformation];
     
@@ -271,249 +269,63 @@ MJImageFileFormat * const MJImageFileFormatWEBP = @"webp";
     
     switch (cropMode)
     {
-        case MJImageCropModeScaleToFill:
+        case MJCloudinaryImageCropModeScaleToFill:
             transformation.crop = @"scale";
             break;
-        case MJImageCropModeScaleAspectFill:
+        case MJCloudinaryImageCropModeScaleAspectFill:
             transformation.crop = @"fill";
             transformation.gravity = @"center";
             break;
-        case MJImageCropModeScaleAspectFit:
+        case MJCloudinaryImageCropModeScaleAspectFit:
             transformation.crop = @"fit";
             break;
-        case MJImageCropModeCenter:
+        case MJCloudinaryImageCropModeCenter:
             transformation.crop = @"crop";
             transformation.gravity = @"center";
             break;
-        case MJImageCropModeTop:
+        case MJCloudinaryImageCropModeTop:
             transformation.crop = @"fill";
             transformation.gravity = @"north";
             break;
-        case MJImageCropModeBottom:
+        case MJCloudinaryImageCropModeBottom:
             transformation.crop = @"fill";
             transformation.gravity = @"south";
             break;
-        case MJImageCropModeLeft:
+        case MJCloudinaryImageCropModeLeft:
             transformation.crop = @"fill";
             transformation.gravity = @"west";
             break;
-        case MJImageCropModeRight:
+        case MJCloudinaryImageCropModeRight:
             transformation.crop = @"fill";
             transformation.gravity = @"east";
             break;
-        case MJImageCropModeTopLeft:
+        case MJCloudinaryImageCropModeTopLeft:
             transformation.crop = @"fill";
             transformation.gravity = @"north_west";
             break;
-        case MJImageCropModeTopRight:
+        case MJCloudinaryImageCropModeTopRight:
             transformation.crop = @"fill";
             transformation.gravity = @"north_east";
             break;
-        case MJImageCropModeBottomLeft:
+        case MJCloudinaryImageCropModeBottomLeft:
             transformation.crop = @"fill";
             transformation.gravity = @"south_west";
             break;
-        case MJImageCropModeBottomRight:
+        case MJCloudinaryImageCropModeBottomRight:
             transformation.crop = @"fill";
             transformation.gravity = @"south_east";
             break;
-        case MJImageCropModeFace:
+        case MJCloudinaryImageCropModeFace:
             transformation.crop = @"thumb";
             transformation.gravity = @"face";
             break;
-        case MJImageCropModeFaces:
+        case MJCloudinaryImageCropModeFaces:
             transformation.crop = @"thumb";
             transformation.gravity = @"faces";
             break;
     }
     
     return transformation;
-}
-
-@end
-
-#pragma mark - UIImageView Extension
-
-MJImageCropMode MJImageCropModeFromUIViewContentMode(UIViewContentMode contentMode)
-{
-    MJImageCropMode cropMode = MJImageCropModeScaleAspectFit;
-    
-    switch (contentMode)
-    {
-        case UIViewContentModeScaleToFill:
-            cropMode = MJImageCropModeScaleToFill;
-            break;
-        case UIViewContentModeScaleAspectFit:
-            cropMode = MJImageCropModeScaleAspectFit;
-            break;
-        case UIViewContentModeScaleAspectFill:
-            cropMode = MJImageCropModeScaleAspectFill;
-            break;
-        case UIViewContentModeCenter:
-            cropMode = MJImageCropModeCenter;
-            break;
-        case UIViewContentModeTop:
-            cropMode = MJImageCropModeTop;
-            break;
-        case UIViewContentModeBottom:
-            cropMode = MJImageCropModeBottom;
-            break;
-        case UIViewContentModeLeft:
-            cropMode = MJImageCropModeLeft;
-            break;
-        case UIViewContentModeRight:
-            cropMode = MJImageCropModeRight;
-            break;
-        case UIViewContentModeTopLeft:
-            cropMode = MJImageCropModeTopLeft;
-            break;
-        case UIViewContentModeTopRight:
-            cropMode = MJImageCropModeTopRight;
-            break;
-        case UIViewContentModeBottomLeft:
-            cropMode = MJImageCropModeBottomLeft;
-            break;
-        case UIViewContentModeBottomRight:
-            cropMode = MJImageCropModeBottomRight;
-            break;
-            
-        case UIViewContentModeRedraw:
-            // Nothing to do
-            break;
-    }
-    
-    return cropMode;
-}
-
-@implementation UIImageView (MJCloudinaryInterface)
-
-#pragma mark Properties
-
-- (void)mjz_setCloudinaryInterface:(MJCloudinaryInterface *)urlImageComposer
-{
-    objc_setAssociatedObject(self, @selector(mjz_cloudinaryInterface), urlImageComposer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (MJCloudinaryInterface*)mjz_cloudinaryInterface
-{
-    return objc_getAssociatedObject(self, @selector(mjz_cloudinaryInterface));
-}
-
-- (MJImageCropMode)mjz_imageCropMode
-{
-    NSNumber *number = objc_getAssociatedObject(self, @selector(mjz_imageCropMode));
-    if (number)
-        return [number unsignedIntegerValue];
-    
-    return MJImageCropModeFromUIViewContentMode(self.contentMode);
-}
-
-- (void)mjz_setImageCropMode:(MJImageCropMode)mjz_imageCropMode
-{
-    objc_setAssociatedObject(self, @selector(mjz_imageCropMode), @(mjz_imageCropMode), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-#pragma mark Public Methods
-
-- (void)mjz_setImageFromImageKey:(NSString*)imageKey
-{
-    [self mjz_setImageFromImageKey:imageKey radius:0 placeholder:nil];
-}
-
-- (void)mjz_setImageFromImageKey:(NSString*)imageKey radius:(CGFloat)radius
-{
-    [self mjz_setImageFromImageKey:imageKey radius:radius placeholder:nil];
-}
-
-- (void)mjz_setImageFromImageKey:(NSString*)imageKey placeholder:(UIImage*)placeholder
-{
-    [self mjz_setImageFromImageKey:imageKey radius:0 placeholder:placeholder];
-}
-
-- (void)mjz_setImageFromImageKey:(NSString*)imageKey
-                          radius:(CGFloat)radius
-                     placeholder:(UIImage*)placeholder
-{
-    MJCloudinaryInterface *cloudinaryInterface = self.mjz_cloudinaryInterface;
-    
-    if (!cloudinaryInterface)
-        cloudinaryInterface = [MJCloudinaryInterface defaultInterface];
-    
-    NSURL *url = [cloudinaryInterface URLForImageKey:imageKey
-                                                size:self.bounds.size
-                                            cropMode:self.mjz_imageCropMode
-                                              radius:radius];
-    
-    [self hnk_setImageFromURL:url placeholder:placeholder];
-}
-
-- (void)mjz_setImageFromImageKey:(NSString*)imageKey
-                pretransformCrop:(CGRect)pretransformCrop
-                          radius:(CGFloat)radius
-                     placeholder:(UIImage*)placeholder
-{
-    MJCloudinaryInterface *cloudinaryInterface = self.mjz_cloudinaryInterface;
-    
-    if (!cloudinaryInterface)
-        cloudinaryInterface = [MJCloudinaryInterface defaultInterface];
-    
-    NSURL *url = [cloudinaryInterface URLForImageKey:imageKey
-                                    pretransformCrop:pretransformCrop
-                                                size:self.bounds.size
-                                               scale:[UIScreen mainScreen].scale
-                                            cropMode:self.mjz_imageCropMode
-                                              radius:radius];
-    
-    [self hnk_setImageFromURL:url placeholder:placeholder];
-}
-
-- (void)mjz_setImageFromImageKey:(NSString*)imageKey
-                     placeholder:(UIImage*)placeholder
-                         success:(void (^)(UIImage *image))successBlock
-                         failure:(void (^)(NSError *error))failureBlock
-{
-    [self mjz_setImageFromImageKey:imageKey radius:0 placeholder:placeholder success:successBlock failure:failureBlock];
-}
-
-- (void)mjz_setImageFromImageKey:(NSString*)imageKey
-                          radius:(CGFloat)radius
-                     placeholder:(UIImage*)placeholder
-                         success:(void (^)(UIImage *image))successBlock
-                         failure:(void (^)(NSError *error))failureBlock
-{
-    MJCloudinaryInterface *cloudinaryInterface = self.mjz_cloudinaryInterface;
-    
-    if (!cloudinaryInterface)
-        cloudinaryInterface = [MJCloudinaryInterface defaultInterface];
-    
-    NSURL *url = [cloudinaryInterface URLForImageKey:imageKey
-                                                size:self.bounds.size
-                                            cropMode:self.mjz_imageCropMode
-                                              radius:radius];
-    
-    [self hnk_setImageFromURL:url placeholder:placeholder success:successBlock failure:failureBlock];
-}
-
-- (void)mjz_setImageFromImageKey:(NSString*)imageKey
-                pretransformCrop:(CGRect)pretransformCrop
-                          radius:(CGFloat)radius
-                     placeholder:(UIImage*)placeholder
-                         success:(void (^)(UIImage *image))successBlock
-                         failure:(void (^)(NSError *error))failureBlock
-{
-    MJCloudinaryInterface *cloudinaryInterface = self.mjz_cloudinaryInterface;
-    
-    if (!cloudinaryInterface)
-        cloudinaryInterface = [MJCloudinaryInterface defaultInterface];
-    
-    NSURL *url = [cloudinaryInterface URLForImageKey:imageKey
-                                    pretransformCrop:pretransformCrop
-                                                size:self.bounds.size
-                                               scale:[UIScreen mainScreen].scale
-                                            cropMode:self.mjz_imageCropMode
-                                              radius:radius];
-
-    [self hnk_setImageFromURL:url placeholder:placeholder success:successBlock failure:failureBlock];
 }
 
 @end
