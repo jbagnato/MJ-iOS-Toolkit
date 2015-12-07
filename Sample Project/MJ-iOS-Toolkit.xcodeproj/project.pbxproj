@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D237C8991C15EC4E00FC1B64 /* MJAppLinkRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = D237C8981C15EC4E00FC1B64 /* MJAppLinkRecognizer.m */; };
 		D238DEFF1BC7E2D500FB0DF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D238DEFE1BC7E2D500FB0DF4 /* main.m */; };
 		D238DF021BC7E2D500FB0DF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D238DF011BC7E2D500FB0DF4 /* AppDelegate.m */; };
 		D238DF051BC7E2D500FB0DF4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D238DF041BC7E2D500FB0DF4 /* ViewController.m */; };
@@ -54,6 +55,8 @@
 /* Begin PBXFileReference section */
 		66733CDADF19DDFE0E0814BA /* Pods-MJ-iOS-Toolkit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJ-iOS-Toolkit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MJ-iOS-Toolkit/Pods-MJ-iOS-Toolkit.debug.xcconfig"; sourceTree = "<group>"; };
 		669D30EECED1E09DE17BD2FD /* Pods-MJ-iOS-Toolkit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJ-iOS-Toolkit.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJ-iOS-Toolkit/Pods-MJ-iOS-Toolkit.release.xcconfig"; sourceTree = "<group>"; };
+		D237C8971C15EC4E00FC1B64 /* MJAppLinkRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJAppLinkRecognizer.h; path = Tools/MJAppLinkRecognizer.h; sourceTree = "<group>"; };
+		D237C8981C15EC4E00FC1B64 /* MJAppLinkRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJAppLinkRecognizer.m; path = Tools/MJAppLinkRecognizer.m; sourceTree = "<group>"; };
 		D238DEFA1BC7E2D400FB0DF4 /* MJ-iOS-Toolkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MJ-iOS-Toolkit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D238DEFE1BC7E2D500FB0DF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D238DF001BC7E2D500FB0DF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 			children = (
 				D29BC7571C060E4100CF11BC /* MJSecureKey.h */,
 				D29BC7581C060E4100CF11BC /* MJSecureKey.m */,
+				D237C8971C15EC4E00FC1B64 /* MJAppLinkRecognizer.h */,
+				D237C8981C15EC4E00FC1B64 /* MJAppLinkRecognizer.m */,
 				D29BC7821C06179600CF11BC /* MJCloudinaryInterface.h */,
 				D29BC7831C06179600CF11BC /* MJCloudinaryInterface.m */,
 				D29BC7841C06179600CF11BC /* UIImageView+MJCloudinaryInterface.h */,
@@ -482,6 +487,7 @@
 				D29BC77E1C06164D00CF11BC /* UIAlertView+Blocks.m in Sources */,
 				D29BC7871C06179600CF11BC /* UIImageView+MJCloudinaryInterface.m in Sources */,
 				D29BC7811C06177500CF11BC /* MJTextViewCell.m in Sources */,
+				D237C8991C15EC4E00FC1B64 /* MJAppLinkRecognizer.m in Sources */,
 				D29BC7511C060DA900CF11BC /* MJValidationService.m in Sources */,
 				D29BC7761C06158F00CF11BC /* UIBarButtonItem+Additions.m in Sources */,
 				D29BC7551C060DCB00CF11BC /* MJTaskDispatcher.m in Sources */,
