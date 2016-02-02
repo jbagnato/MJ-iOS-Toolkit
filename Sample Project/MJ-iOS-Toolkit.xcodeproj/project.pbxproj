@@ -16,8 +16,11 @@
 		D238DF0D1BC7E2D500FB0DF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D238DF0B1BC7E2D500FB0DF4 /* LaunchScreen.storyboard */; };
 		D238DF181BC7E2D500FB0DF4 /* MJ_iOS_ToolkitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D238DF171BC7E2D500FB0DF4 /* MJ_iOS_ToolkitTests.m */; };
 		D238DF231BC7E2D500FB0DF4 /* MJ_iOS_ToolkitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D238DF221BC7E2D500FB0DF4 /* MJ_iOS_ToolkitUITests.m */; };
-		D29BC7511C060DA900CF11BC /* MJValidationService.m in Sources */ = {isa = PBXBuildFile; fileRef = D29BC74D1C060DA900CF11BC /* MJValidationService.m */; };
-		D29BC7521C060DA900CF11BC /* MJValidationStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = D29BC74F1C060DA900CF11BC /* MJValidationStrategy.m */; };
+		D25FE4501C60E99A007D4ED8 /* MJDataProviderDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = D25FE44F1C60E99A007D4ED8 /* MJDataProviderDirector.m */; };
+		D25FE4531C60E9D6007D4ED8 /* MJPushNotificationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D25FE4521C60E9D6007D4ED8 /* MJPushNotificationQueue.m */; };
+		D25FE4561C60E9F5007D4ED8 /* MJTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D25FE4551C60E9F5007D4ED8 /* MJTableViewController.m */; };
+		D25FE4591C60EA70007D4ED8 /* MJObjectStack.m in Sources */ = {isa = PBXBuildFile; fileRef = D25FE4581C60EA70007D4ED8 /* MJObjectStack.m */; };
+		D25FE45C1C60EBDC007D4ED8 /* MJNotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D25FE45B1C60EBDC007D4ED8 /* MJNotificationView.m */; };
 		D29BC7551C060DCB00CF11BC /* MJTaskDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D29BC7541C060DCB00CF11BC /* MJTaskDispatcher.m */; };
 		D29BC7591C060E4100CF11BC /* MJSecureKey.m in Sources */ = {isa = PBXBuildFile; fileRef = D29BC7581C060E4100CF11BC /* MJSecureKey.m */; };
 		D29BC75F1C06103900CF11BC /* MJInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = D29BC75E1C06103900CF11BC /* MJInteractor.m */; };
@@ -73,11 +76,16 @@
 		D238DF1E1BC7E2D500FB0DF4 /* MJ-iOS-ToolkitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MJ-iOS-ToolkitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D238DF221BC7E2D500FB0DF4 /* MJ_iOS_ToolkitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJ_iOS_ToolkitUITests.m; sourceTree = "<group>"; };
 		D238DF241BC7E2D500FB0DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D29BC74C1C060DA900CF11BC /* MJValidationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJValidationService.h; path = Core/MJValidationService.h; sourceTree = "<group>"; };
-		D29BC74D1C060DA900CF11BC /* MJValidationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJValidationService.m; path = Core/MJValidationService.m; sourceTree = "<group>"; };
-		D29BC74E1C060DA900CF11BC /* MJValidationStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJValidationStrategy.h; path = Core/MJValidationStrategy.h; sourceTree = "<group>"; };
-		D29BC74F1C060DA900CF11BC /* MJValidationStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJValidationStrategy.m; path = Core/MJValidationStrategy.m; sourceTree = "<group>"; };
-		D29BC7501C060DA900CF11BC /* MJValidationStrategyDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJValidationStrategyDataSource.h; path = Core/MJValidationStrategyDataSource.h; sourceTree = "<group>"; };
+		D25FE44E1C60E99A007D4ED8 /* MJDataProviderDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJDataProviderDirector.h; path = Core/MJDataProviderDirector.h; sourceTree = "<group>"; };
+		D25FE44F1C60E99A007D4ED8 /* MJDataProviderDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJDataProviderDirector.m; path = Core/MJDataProviderDirector.m; sourceTree = "<group>"; };
+		D25FE4511C60E9D6007D4ED8 /* MJPushNotificationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJPushNotificationQueue.h; path = Tools/MJPushNotificationQueue.h; sourceTree = "<group>"; };
+		D25FE4521C60E9D6007D4ED8 /* MJPushNotificationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJPushNotificationQueue.m; path = Tools/MJPushNotificationQueue.m; sourceTree = "<group>"; };
+		D25FE4541C60E9F5007D4ED8 /* MJTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJTableViewController.h; sourceTree = "<group>"; };
+		D25FE4551C60E9F5007D4ED8 /* MJTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJTableViewController.m; sourceTree = "<group>"; };
+		D25FE4571C60EA70007D4ED8 /* MJObjectStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJObjectStack.h; path = Tools/MJObjectStack.h; sourceTree = "<group>"; };
+		D25FE4581C60EA70007D4ED8 /* MJObjectStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJObjectStack.m; path = Tools/MJObjectStack.m; sourceTree = "<group>"; };
+		D25FE45A1C60EBDC007D4ED8 /* MJNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJNotificationView.h; sourceTree = "<group>"; };
+		D25FE45B1C60EBDC007D4ED8 /* MJNotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJNotificationView.m; sourceTree = "<group>"; };
 		D29BC7531C060DCB00CF11BC /* MJTaskDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJTaskDispatcher.h; path = Core/MJTaskDispatcher.h; sourceTree = "<group>"; };
 		D29BC7541C060DCB00CF11BC /* MJTaskDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJTaskDispatcher.m; path = Core/MJTaskDispatcher.m; sourceTree = "<group>"; };
 		D29BC7571C060E4100CF11BC /* MJSecureKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJSecureKey.h; path = Tools/MJSecureKey.h; sourceTree = "<group>"; };
@@ -231,15 +239,12 @@
 		D29BC74B1C060D9C00CF11BC /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				D29BC74C1C060DA900CF11BC /* MJValidationService.h */,
-				D29BC74D1C060DA900CF11BC /* MJValidationService.m */,
-				D29BC74E1C060DA900CF11BC /* MJValidationStrategy.h */,
-				D29BC74F1C060DA900CF11BC /* MJValidationStrategy.m */,
-				D29BC7501C060DA900CF11BC /* MJValidationStrategyDataSource.h */,
 				D29BC7531C060DCB00CF11BC /* MJTaskDispatcher.h */,
 				D29BC7541C060DCB00CF11BC /* MJTaskDispatcher.m */,
 				D29BC75D1C06103900CF11BC /* MJInteractor.h */,
 				D29BC75E1C06103900CF11BC /* MJInteractor.m */,
+				D25FE44E1C60E99A007D4ED8 /* MJDataProviderDirector.h */,
+				D25FE44F1C60E99A007D4ED8 /* MJDataProviderDirector.m */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -255,6 +260,10 @@
 				D29BC7831C06179600CF11BC /* MJCloudinaryInterface.m */,
 				D29BC7841C06179600CF11BC /* UIImageView+MJCloudinaryInterface.h */,
 				D29BC7851C06179600CF11BC /* UIImageView+MJCloudinaryInterface.m */,
+				D25FE4511C60E9D6007D4ED8 /* MJPushNotificationQueue.h */,
+				D25FE4521C60E9D6007D4ED8 /* MJPushNotificationQueue.m */,
+				D25FE4571C60EA70007D4ED8 /* MJObjectStack.h */,
+				D25FE4581C60EA70007D4ED8 /* MJObjectStack.m */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -266,6 +275,8 @@
 				D29BC7801C06177500CF11BC /* MJTextViewCell.m */,
 				D29BC7641C0614EB00CF11BC /* MJMultiToggleControl.h */,
 				D29BC7651C0614EB00CF11BC /* MJMultiToggleControl.m */,
+				D25FE45A1C60EBDC007D4ED8 /* MJNotificationView.h */,
+				D25FE45B1C60EBDC007D4ED8 /* MJNotificationView.m */,
 				D29BC76D1C06158F00CF11BC /* NSString+Additions.h */,
 				D29BC76E1C06158F00CF11BC /* NSString+Additions.m */,
 				D29BC76F1C06158F00CF11BC /* UIBarButtonItem+Additions.h */,
@@ -287,6 +298,8 @@
 			children = (
 				D2C99C0C1BDE74D300CCC485 /* MJContainerViewController.h */,
 				D2C99C0D1BDE74D300CCC485 /* MJContainerViewController.m */,
+				D25FE4541C60E9F5007D4ED8 /* MJTableViewController.h */,
+				D25FE4551C60E9F5007D4ED8 /* MJTableViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -482,23 +495,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2C99C0E1BDE74D300CCC485 /* MJContainerViewController.m in Sources */,
+				D25FE4531C60E9D6007D4ED8 /* MJPushNotificationQueue.m in Sources */,
 				D29BC7751C06158F00CF11BC /* NSString+Additions.m in Sources */,
 				D29BC77D1C06164D00CF11BC /* UIActionSheet+Blocks.m in Sources */,
 				D29BC77E1C06164D00CF11BC /* UIAlertView+Blocks.m in Sources */,
 				D29BC7871C06179600CF11BC /* UIImageView+MJCloudinaryInterface.m in Sources */,
 				D29BC7811C06177500CF11BC /* MJTextViewCell.m in Sources */,
 				D237C8991C15EC4E00FC1B64 /* MJAppLinkRecognizer.m in Sources */,
-				D29BC7511C060DA900CF11BC /* MJValidationService.m in Sources */,
 				D29BC7761C06158F00CF11BC /* UIBarButtonItem+Additions.m in Sources */,
+				D25FE4561C60E9F5007D4ED8 /* MJTableViewController.m in Sources */,
 				D29BC7551C060DCB00CF11BC /* MJTaskDispatcher.m in Sources */,
 				D29BC7661C0614EB00CF11BC /* MJMultiToggleControl.m in Sources */,
 				D29BC7781C06158F00CF11BC /* UIView+Additions.m in Sources */,
 				D238DF051BC7E2D500FB0DF4 /* ViewController.m in Sources */,
+				D25FE4591C60EA70007D4ED8 /* MJObjectStack.m in Sources */,
 				D29BC7861C06179600CF11BC /* MJCloudinaryInterface.m in Sources */,
 				D29BC7591C060E4100CF11BC /* MJSecureKey.m in Sources */,
-				D29BC7521C060DA900CF11BC /* MJValidationStrategy.m in Sources */,
+				D25FE4501C60E99A007D4ED8 /* MJDataProviderDirector.m in Sources */,
 				D238DF021BC7E2D500FB0DF4 /* AppDelegate.m in Sources */,
 				D29BC75F1C06103900CF11BC /* MJInteractor.m in Sources */,
+				D25FE45C1C60EBDC007D4ED8 /* MJNotificationView.m in Sources */,
 				D29BC7771C06158F00CF11BC /* UIResponder+Addtions.m in Sources */,
 				D238DEFF1BC7E2D500FB0DF4 /* main.m in Sources */,
 			);

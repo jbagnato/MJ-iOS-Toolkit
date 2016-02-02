@@ -103,6 +103,11 @@ FOUNDATION_EXTERN MJCloudinaryImageCropMode MJCloudinaryImageCropModeFromUIViewC
  **/
 @property (nonatomic, strong) MJCloudinaryImageFileFormat *radiusFileFormat;
 
+/**
+ * The JPG compression quality. Value from 0 to 1 (0 the worst quality, 1 no quality compression). Default value is 1.
+ **/
+@property(nonatomic, assign) CGFloat jpgCompressionQuality;
+
 /** *************************************************** **
  * @name Uploading images
  ** *************************************************** **/

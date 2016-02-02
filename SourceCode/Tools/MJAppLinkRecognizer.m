@@ -16,9 +16,10 @@
 
 #import "MJAppLinkRecognizer.h"
 
-NSString * const MJAppLinkPatternNumeric = @"(\\d+)";
-NSString * const MJAppLinkPatternNonNumeric = @"(\\D+)";
-NSString * const MJAppLinkPatternAlphanumeric = @"(\\w+)";
+NSString * const MJAppLinkPatternNumeric                = @"(\\d+)";
+NSString * const MJAppLinkPatternNonNumeric             = @"(\\D+)";
+NSString * const MJAppLinkPatternAlphanumeric           = @"(\\w+)";
+NSString * const MJAppLinkPatternAlphanumericAndDash    = @"([\\w,-]+)";
 
 @interface MJAppLinkRecognizerConfiguration ()
 

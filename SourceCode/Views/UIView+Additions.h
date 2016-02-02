@@ -17,65 +17,143 @@
 #import <UIKit/UIKit.h>
 
 /**
- * Find subviews inside a view.
+ * Additions to UIView.
  **/
 @interface UIView (Additions)
 
 /** ************************************************************ **
- * @name UIResponder support
+ * @name Finding next responder
  ** ************************************************************ **/
 
 /**
- * Returns the next UITextField or UITextView located in the next UITableViewCells on a same UITableView section.
+ * Returns the next UITextField or UITextView located inside the next UITableViewCells on a same UITableView section.
  * @return A candidate to next first responder.
  * @discussion The receiver view must be located inside a table view cell, and the cell must be located inside a table view.
  **/
 - (nullable __kindof UIView*)add_nextFirstResponder;
 
 /** ************************************************************ **
- * @name Finding Subviews
+ * @name Finding subviews
  ** ************************************************************ **/
 
 /**
- * Return a subview with the given accessibility identifier.
+ * Returns the first subview with the given accessibility identifier.
  * @param identifier The accessibility identifier.
  * @return The subview that matches the passed arguments.
  **/
 - (nullable __kindof UIView*)add_subviewWithAccessibilityIdentifier:(nonnull NSString*)identifier;
 
 /**
- * Return a subview with the given tag.
+ * Returns all subviews with the given accessibility identifier.
+ * @param identifier The accessibility identifier.
+ * @return The subviews that matches the passed arguments.
+ **/
+- (nonnull NSArray<__kindof UIView*>*)add_subviewsWithAccessibilityIdentifier:(nonnull NSString*)identifier;
+
+/**
+ * Enumerates all subviews with the given accessibility identifier.
+ * @param identifier The accessibility identifier.
+ * @param block The object enumeration block
+ **/
+- (void)add_enumerateSubviewsWithAccessibilityIdentifier:(nonnull NSString*)identifier
+                                                 objects:(void (^_Nonnull)(__kindof UIView * _Nonnull view, BOOL * _Nullable stop))block;
+
+/**
+ * Returns the first subview with the given tag.
  * @param tag The tag.
  * @return The subview that matches the passed arguments.
  **/
 - (nullable __kindof UIView*)add_subviewWithTag:(NSInteger)tag;
 
 /**
- * Return a subview with the given a class.
+ * Returns all subviews with the given tag.
+ * @param tag The tag.
+ * @return The subviews that matches the passed arguments.
+ **/
+- (nonnull NSArray<__kindof UIView*>*)add_subviewsWithTag:(NSInteger)tag;
+
+/**
+ * Enumerates all subviews with the given tag.
+ * @param tag The tag.
+ * @param block The object enumeration block
+ **/
+- (void)add_enumerateSubviewsWithTag:(NSInteger)tag
+                             objects:(void (^_Nonnull)(__kindof UIView * _Nonnull view, BOOL * _Nullable stop))block;
+
+/**
+ * Returns the first subview of the given class.
  * @param clazz The class.
  * @return The subview that matches the passed arguments.
  **/
 - (nullable __kindof UIView*)add_subviewOfClass:(nonnull Class)clazz;
 
+/**
+ * Returns all subviews of the given class.
+ * @param clazz The class.
+ * @return The subviews that matches the passed arguments.
+ **/
+- (nonnull NSArray<__kindof UIView*>*)add_subviewsOfClass:(nonnull Class)clazz;
 
 /**
- * Return a subview with that passes the given test.
+ * Enumerates all subviews of the given class.
+ * @param clazz The class.
+ * @param block The object enumeration block
+ **/
+- (void)add_enumerateSubviewsOfClass:(nonnull Class)clazz
+                             objects:(void (^_Nonnull)(__kindof UIView * _Nonnull view, BOOL * _Nullable stop))block;
+
+/**
+ * Enumerate all subviews in the hierarchy tree.
+ * @return An array with all views in the subtree of views form the receiver.
+ **/
+- (nonnull NSArray<__kindof UIView*>*)add_allSubviews;
+
+/**
+ * Enumerate all subviews in the hierarchy tree.
+ * @param block The object enumeration block
+ **/
+- (void)add_enumerateAllSubviews:(void (^_Nonnull)(__kindof UIView * _Nonnull view, BOOL * _Nullable stop))block;
+
+/**
+ * Returns the first subview passing the test.
  * @param testBlock The test block
  * @return The subview that matches the passed arguments.
  **/
-- (nullable __kindof UIView*)add_subviewPassingTest:(BOOL (^_Nonnull)(UIView * _Nonnull view))testBlock;
+- (nullable __kindof UIView*)add_subviewPassingTest:(BOOL (^_Nonnull)(__kindof UIView * _Nonnull view))testBlock;
 
 /**
- * Return all subviews that passes the given test.
+ * Returns all subviews that passes the given test.
  * @param testBlock The test block
  * @return An array with the subview that matches the passed arguments.
  **/
-- (nonnull NSArray<__kindof UIView*>*)add_subviewsPassingTest:(BOOL (^_Nonnull)(UIView * _Nonnull view))testBlock;
+- (nonnull NSArray<__kindof UIView*>*)add_subviewsPassingTest:(BOOL (^_Nonnull)(__kindof UIView * _Nonnull view))testBlock;
 
 /**
- * Return all subviews of all subviews of all subviews...
- * @return An array with all views in the subtree of views form the receiver.
+ * Enumerates all subviews that passes the given test.
+ * @param testBlock The test block
+ * @param block The object enumeration block
  **/
-- (nonnull NSArray<__kindof UIView*>*)add_allSubivews;
+- (void)add_enumerateSubviewsPassingTest:(BOOL (^_Nonnull)(__kindof UIView * _Nonnull view))testBlock
+                                 objects:(void (^_Nonnull)(__kindof UIView * _Nonnull view, BOOL * _Nullable stop))block;
+
+/** ************************************************************ **
+ * @name Geometry
+ ** ************************************************************ **/
+
+/**
+ * Defines the view's layer anchor point using a [0..1] range.
+ * @param anchorPoint A CGPoint with a [0..1] range.
+ **/
+- (void)add_setAnchorPoint:(CGPoint)anchorPoint;
+
+/** ************************************************************ **
+ * @name Rendering
+ ** ************************************************************ **/
+
+/**
+ * Creates a UIImage with the view.
+ * @return An image with the rendered view.
+ **/
+- (nullable UIImage *)add_imageByRenderingView;
 
 @end

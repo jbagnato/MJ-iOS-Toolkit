@@ -34,6 +34,7 @@ typedef NS_ENUM(NSUInteger, MJAppLinkOptions)
 extern NSString * const MJAppLinkPatternNumeric;
 extern NSString * const MJAppLinkPatternNonNumeric;
 extern NSString * const MJAppLinkPatternAlphanumeric;
+extern NSString * const MJAppLinkPatternAlphanumericAndDash;
 
 /**
  * Configuration class

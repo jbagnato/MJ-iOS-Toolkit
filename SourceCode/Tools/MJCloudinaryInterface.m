@@ -58,6 +58,7 @@ MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatWEBP = @"webp";
         _cloudinary = [[CLCloudinary alloc] init];
         _fileFormat = MJCloudinaryImageFileFormatJPG;
         _radiusFileFormat = MJCloudinaryImageFileFormatPNG;
+        _jpgCompressionQuality = 1.0;
     }
     return self;
 }
@@ -164,7 +165,18 @@ MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatWEBP = @"webp";
         return [NSURL URLWithString:imageKey];
     }
     
-    NSString *url = [_cloudinary url:imageKey];
+    NSString *url = nil;
+    
+    if (_jpgCompressionQuality < 1.0)
+    {
+        CLTransformation *transformation = [CLTransformation transformation];
+        transformation.quality = @(_jpgCompressionQuality*100);
+        url = [_cloudinary url:imageKey options:@{@"transformation" : transformation}];
+    }
+    else
+    {
+        url = [_cloudinary url:imageKey];
+    }
     
     if (_enableDebugLogs)
         NSLog(@"[MJCloudinaryInterface] URL CREATION:\n{\n\tkey:%@\n}\nURL: %@\n",imageKey, url);
@@ -192,6 +204,9 @@ MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatWEBP = @"webp";
     
     CLTransformation *transformation = [self mjz_transformationForSize:size scale:scale cropMode:cropMode radius:radius];
     
+    if (_jpgCompressionQuality < 1.0)
+        transformation.quality = @(_jpgCompressionQuality*100);
+    
     NSString *url = [_cloudinary url:imageKey options:@{@"transformation": transformation}];
     
     if (_enableDebugLogs)
@@ -212,6 +227,9 @@ MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatWEBP = @"webp";
     
     CLTransformation *regularTransformation = [self mjz_transformationForSize:size scale:scale cropMode:cropMode radius:radius];
 
+    if (_jpgCompressionQuality < 1.0)
+        regularTransformation.quality = @(_jpgCompressionQuality*100);
+    
     if (CGRectEqualToRect(pretransformCropRect, CGRectZero))
     {
         NSString *url = [_cloudinary url:imageKey options:@{@"transformation": regularTransformation}];

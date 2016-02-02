@@ -1,5 +1,5 @@
 //
-// Copyright 2014 Mobile Jazz SL
+// Copyright 2015 Mobile Jazz SL
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,71 +16,43 @@
 
 #import <Foundation/Foundation.h>
 
-#import "MJTaskDispatcher.h"
+#define DBG_IS_MAIN_THREAD(msg) NSLog(@" >>>>> IS MAIN THREAD [%@]: %@ <<<<< ",msg, [NSThread isMainThread]?@"YES":@"NO");
 
 @class MJInteractor;
 
-typedef NS_ENUM(NSUInteger, MJInteractorType)
-{
-    MJInteractorTypeSharedQueue,
-    MJInteractorTypeClassQueue,
-    MJInteractorTypeInstanceQueue,
-};
-
-/**
- * Convenience method to execute a background block in an interactor.
- **/
-extern void MJInteractorBackground(MJInteractor *interactor, void (^block)());
-
-/**
- * Convenience method to execute a foreground block in an interactor.
- **/
-extern void MJInteractorForeground(MJInteractor *interactor, void (^block)());
+extern void MJInteractorBegin(MJInteractor *interactor, void (^block)());
+extern void MJInteractorEnd(MJInteractor *interactor, void (^block)());
 
 /**
  * Interactor superclass
  **/
-@interface MJInteractor : NSObject <MJTaskDispatcherObserver>
-
-/** ************************************************************ **
- * @name Initializers
- ** ************************************************************ **/
+@interface MJInteractor : NSObject
 
 /**
- * Default initializer.
- * @param type The interactor type.
- * @return The initialized instance.
+ * The dispatch queue.
  **/
-- (id)initWithType:(MJInteractorType)type;
-
-/** ************************************************************ **
- * @name Properties
- ** ************************************************************ **/
+@property (nonatomic, strong, readonly) dispatch_queue_t queue;
 
 /**
- * The interactor type.
+ * Executes a block in a background queue.
+ * @discussion A `begin` call must be in corresponded to a `end` call.
  **/
-@property (nonatomic, assign, readonly) MJInteractorType type;
+- (void)begin:(void (^)())block;
 
 /**
- * The interactor's task dispatcher.
+ * Executes a block in the main queue.
+ * @discussion A `begin` call must be in corresponded to a `end` call.
  **/
-@property (nonatomic, strong, readonly) MJTaskDispatcher *taskDispatcher;
-
-/** ************************************************************ **
- * @name Methods
- ** ************************************************************ **/
+- (void)end:(void (^)())block;
 
 /**
- * Executes a block in a background thread.
- * @discussion A `background` call must be in corresponded to a `foreground` call.
+ * Set needs refresh method. This will flag the `refresh` property to YES until the end of the interactor.
  **/
-- (void)background:(void (^)())block;
+- (void)setNeedsRefresh;
 
 /**
- * Executes a block in a foreground thread.
- * @discussion A `background` call must be in corresponded to a `foreground` call.
+ * A refresh flag.
  **/
-- (void)foreground:(void (^)())block;
+@property (nonatomic, assign, readwrite) BOOL refresh;
 
 @end

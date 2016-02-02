@@ -77,70 +77,178 @@
 
 - (id)add_subviewWithAccessibilityIdentifier:(NSString*)identifier
 {
-    return [self add_subviewPassingTest:^BOOL(UIView *view) {
+    return [self add_subviewPassingTest:^BOOL(__kindof UIView *view) {
         return [view.accessibilityIdentifier isEqualToString:identifier];
+    }];
+}
+
+- (nonnull NSArray<__kindof UIView*>*)add_subviewsWithAccessibilityIdentifier:(nonnull NSString*)identifier
+{
+    return [self add_subviewsPassingTest:^BOOL(__kindof UIView *view) {
+        return [view.accessibilityIdentifier isEqualToString:identifier];
+    }];
+}
+
+- (void)add_enumerateSubviewsWithAccessibilityIdentifier:(nonnull NSString*)identifier
+                                                 objects:(void (^_Nonnull)(__kindof UIView * _Nonnull view, BOOL * _Nullable stop))block
+{
+    [self add_enumerateSubviewsPassingTest:^BOOL(__kindof UIView * _Nonnull view) {
+        return [view.accessibilityIdentifier isEqualToString:identifier];
+    } objects:^(__kindof UIView * _Nonnull view, BOOL * _Nullable stop) {
+        block(view, stop);
     }];
 }
 
 - (id)add_subviewWithTag:(NSInteger)tag
 {
-    return [self add_subviewPassingTest:^BOOL(UIView *view) {
+    return [self add_subviewPassingTest:^BOOL(__kindof UIView *view) {
         return view.tag == tag;
+    }];
+}
+
+- (nonnull NSArray<__kindof UIView*>*)add_subviewsWithTag:(NSInteger)tag
+{
+    return [self add_subviewsPassingTest:^BOOL(__kindof UIView * _Nonnull view) {
+        return view.tag == tag;
+    }];
+}
+
+- (void)add_enumerateSubviewsWithTag:(NSInteger)tag
+                             objects:(void (^_Nonnull)(__kindof UIView * _Nonnull view, BOOL * _Nullable stop))block
+{
+    [self add_enumerateSubviewsPassingTest:^BOOL(__kindof UIView * _Nonnull view) {
+        return view.tag == tag;
+    } objects:^(__kindof UIView * _Nonnull view, BOOL * _Nullable stop) {
+        block(view, stop);
     }];
 }
 
 - (id)add_subviewOfClass:(Class)clazz
 {
-    return [self add_subviewPassingTest:^BOOL(UIView *view) {
+    return [self add_subviewPassingTest:^BOOL(__kindof UIView *view) {
         return [view isKindOfClass:clazz];
     }];
 }
 
-- (id)add_subviewPassingTest:(BOOL (^)(UIView *view))testBlock
+- (nonnull NSArray<__kindof UIView*>*)add_subviewsOfClass:(nonnull Class)clazz
 {
-    NSMutableArray *array = [NSMutableArray array];
-    [array addObject:self];
-    
-    while (array.count > 0)
-    {
-        UIView *view = [array firstObject];
-        [array removeObjectAtIndex:0];
-        
-        if (view != self && testBlock(view))
-            return view;
-        
-        [array addObjectsFromArray:view.subviews];
-    }
-    
-    return nil;
+    return [self add_subviewsPassingTest:^BOOL(__kindof UIView *view) {
+        return [view isKindOfClass:clazz];
+    }];
 }
 
-- (NSArray*)add_subviewsPassingTest:(BOOL (^)(UIView *view))testBlock
+- (void)add_enumerateSubviewsOfClass:(nonnull Class)clazz
+                             objects:(void (^_Nonnull)(__kindof UIView * _Nonnull view, BOOL * _Nullable stop))block
+{
+    [self add_enumerateSubviewsPassingTest:^BOOL(__kindof UIView * _Nonnull view) {
+        return [view isKindOfClass:clazz];
+    } objects:^(__kindof UIView * _Nonnull view, BOOL * _Nullable stop) {
+        block(view, stop);
+    }];
+}
+
+- (nonnull NSArray<__kindof UIView*>*)add_allSubviews
+{
+    return [self add_subviewsPassingTest:^BOOL(__kindof UIView * _Nonnull view) {
+        return YES;
+    }];
+}
+
+- (void)add_enumerateAllSubviews:(void (^_Nonnull)(__kindof UIView * _Nonnull view, BOOL * _Nullable stop))block
+{
+    [self add_enumerateSubviewsPassingTest:^BOOL(__kindof UIView * _Nonnull view) {
+        return YES;
+    } objects:^(__kindof UIView * _Nonnull view, BOOL * _Nullable stop) {
+        block(view, stop);
+    }];
+}
+
+- (id)add_subviewPassingTest:(BOOL (^_Nonnull)(__kindof UIView *view))testBlock
+{
+    __block UIView *subview = nil;
+    
+    [self add_enumerateSubviewsPassingTest:^BOOL(__kindof UIView * _Nonnull view) {
+        return testBlock(view);
+    } objects:^(__kindof UIView * _Nonnull view, BOOL * _Nullable stop) {
+        subview = view;
+        *stop = YES;
+    }];
+    
+    return subview;
+}
+
+- (NSArray*)add_subviewsPassingTest:(BOOL (^_Nonnull)(__kindof UIView *view))testBlock
 {
     NSMutableArray *subviews = [NSMutableArray array];
     
-    NSMutableArray *array = [NSMutableArray array];
-    [array addObject:self];
-    
-    while (array.count > 0)
-    {
-        UIView *view = [array firstObject];
-        [array removeObjectAtIndex:0];
-        
-        if (view != self && testBlock(view))
-            [subviews addObject:view];
-        
-        [array addObjectsFromArray:view.subviews];
-    }
+    [self add_enumerateSubviewsPassingTest:^BOOL(__kindof UIView * _Nonnull view) {
+        return testBlock(view);
+    } objects:^(__kindof UIView * _Nonnull view, BOOL * _Nullable stop) {
+        [subviews addObject:view];
+    }];
     
     return [subviews copy];
 }
 
-- (nonnull NSArray<__kindof UIView*>*)add_allSubivews
+- (void)add_enumerateSubviewsPassingTest:(BOOL (^_Nonnull)(__kindof UIView * _Nonnull view))testBlock
+                                 objects:(void (^_Nonnull)(__kindof UIView * _Nonnull view, BOOL * _Nullable stop))block
 {
-    return [self add_subviewsPassingTest:^BOOL(UIView * _Nonnull view) {
-        return YES;
-    }];
+    NSMutableArray *array = [NSMutableArray array];
+    [array addObject:self];
+    
+    while (array.count > 0)
+    {
+        UIView *view = [array firstObject];
+        [array removeObjectAtIndex:0];
+        
+        if (view != self && testBlock(view))
+        {
+            BOOL stop = NO;
+            block(view, &stop);
+            if (stop)
+                return;
+        }
+        
+        [array addObjectsFromArray:view.subviews];
+    }
+}
+
+- (void)add_setAnchorPoint:(CGPoint)anchorPoint
+{
+    CGPoint newPoint = CGPointMake(self.bounds.size.width * anchorPoint.x, self.bounds.size.height * anchorPoint.y);
+    CGPoint oldPoint = CGPointMake(self.bounds.size.width * self.layer.anchorPoint.x, self.bounds.size.height * self.layer.anchorPoint.y);
+    
+    newPoint = CGPointApplyAffineTransform(newPoint, self.transform);
+    oldPoint = CGPointApplyAffineTransform(oldPoint, self.transform);
+    
+    CGPoint position = self.layer.position;
+    
+    position.x -= oldPoint.x;
+    position.x += newPoint.x;
+    
+    position.y -= oldPoint.y;
+    position.y += newPoint.y;
+    
+    self.layer.position = position;
+    self.layer.anchorPoint = anchorPoint;
+}
+
+- (UIImage *)add_imageByRenderingView
+{
+    if (self.bounds.size.width == 0 || self.bounds.size.height == 0)
+        return nil;
+    
+    CGFloat alpha = self.alpha;
+    self.alpha = 1;
+    
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0.0);
+    [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
+    UIImage *resultingImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.alpha = alpha;
+    
+    return resultingImage;
 }
 
 @end
