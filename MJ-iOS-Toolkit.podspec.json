@@ -20,15 +20,15 @@
     "tag": "0.1.0"
   },
   "source_files": [
-	  "Source Code/*.{h,m}",
-	  "Source Code/*/*.{h,m}"
+	  "SourceCode/*.{h,m}",
+	  "SourceCode/*/*.{h,m}"
   ],
   "frameworks": "Foundation",
   "dependencies": {
 	"UIImage+Additions": [],
 	"UIColor+Additions": [],
-	"Cloudinary": ["1.0"],
-	"Haneke": ["1.0"]
+	"Cloudinary": ["~>1.0"],
+	"Haneke": ["~>1.0"]
   },
   "requires_arc": true
 }

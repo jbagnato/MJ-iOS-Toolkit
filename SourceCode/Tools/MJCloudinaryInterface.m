@@ -124,7 +124,7 @@ MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatWEBP = @"webp";
     }
     
     if (_enableDebugLogs)
-        NSLog(@"[MJCloudinaryInterface] IMAGE UPLOAD: Uploading image with bytes length : %lu", imageData.length);
+        NSLog(@"[MJCloudinaryInterface] IMAGE UPLOAD: Uploading image with bytes length : %ld", (long)imageData.length);
 
     CLUploader *uploader = [[CLUploader alloc] init:_cloudinary delegate:nil];
     [uploader upload:imageData?imageData:image options:options withCompletion:^(NSDictionary *successResult, NSString *errorResult, NSInteger code, id context) {
@@ -210,7 +210,7 @@ MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatWEBP = @"webp";
     NSString *url = [_cloudinary url:imageKey options:@{@"transformation": transformation}];
     
     if (_enableDebugLogs)
-        NSLog(@"[MJCloudinaryInterface] URL CREATION:\n{\n\tkey:%@,\n\tsize:%@,\n\tscale:%.2f,\n\tcrop_mode:%ld,\n\tradius:%.2f,\n}\nURL: %@\n",imageKey, NSStringFromCGSize(size), scale, cropMode, radius, url);
+        NSLog(@"[MJCloudinaryInterface] URL CREATION:\n{\n\tkey:%@,\n\tsize:%@,\n\tscale:%.2f,\n\tcrop_mode:%ld,\n\tradius:%.2f,\n}\nURL: %@\n",imageKey, NSStringFromCGSize(size), scale, (long)cropMode, radius, url);
     
     return [NSURL URLWithString:url];
 }
@@ -255,7 +255,7 @@ MJCloudinaryImageFileFormat * const MJCloudinaryImageFileFormatWEBP = @"webp";
 //    http://res.cloudinary.com/dkzkltsvs/image/upload/x_0,y_0,h_640,w_640,c_crop/c_fill,f_png,g_center,h_100,r_max,w_100/vj0wfi6nok3esd87j1x4
     
     if (_enableDebugLogs)
-        NSLog(@"[MJCloudinaryInterface] URL CREATION:\n{\n\tkey:%@,\n\tpre_transform_crop:%@,\n\tsize:%@,\n\tscale:%.2f,\n\tcrop_mode:%ld,\n\tradius:%.2f,\n}\nURL: %@\n",imageKey, NSStringFromCGRect(pretransformCropRect), NSStringFromCGSize(size), scale, cropMode, radius, finalUrl);
+        NSLog(@"[MJCloudinaryInterface] URL CREATION:\n{\n\tkey:%@,\n\tpre_transform_crop:%@,\n\tsize:%@,\n\tscale:%.2f,\n\tcrop_mode:%ld,\n\tradius:%.2f,\n}\nURL: %@\n",imageKey, NSStringFromCGRect(pretransformCropRect), NSStringFromCGSize(size), scale, (long)cropMode, radius, finalUrl);
     
     return [NSURL URLWithString:finalUrl];
 }
