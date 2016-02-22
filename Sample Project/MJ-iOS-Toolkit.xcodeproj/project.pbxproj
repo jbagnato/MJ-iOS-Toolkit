@@ -112,6 +112,7 @@
 		D29BC7831C06179600CF11BC /* MJCloudinaryInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJCloudinaryInterface.m; path = Tools/MJCloudinaryInterface.m; sourceTree = "<group>"; };
 		D29BC7841C06179600CF11BC /* UIImageView+MJCloudinaryInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+MJCloudinaryInterface.h"; path = "Tools/UIImageView+MJCloudinaryInterface.h"; sourceTree = "<group>"; };
 		D29BC7851C06179600CF11BC /* UIImageView+MJCloudinaryInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+MJCloudinaryInterface.m"; path = "Tools/UIImageView+MJCloudinaryInterface.m"; sourceTree = "<group>"; };
+		D2B8DBC31C7AEC6400328B52 /* MJ-iOS-Toolkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MJ-iOS-Toolkit.h"; sourceTree = "<group>"; };
 		D2C99C0C1BDE74D300CCC485 /* MJContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJContainerViewController.h; sourceTree = "<group>"; };
 		D2C99C0D1BDE74D300CCC485 /* MJContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJContainerViewController.m; sourceTree = "<group>"; };
 		E29FF717B1CBC5520389DA4E /* libPods-MJ-iOS-Toolkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MJ-iOS-Toolkit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +217,7 @@
 		D238DF3A1BC7E32000FB0DF4 /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				D2B8DBC31C7AEC6400328B52 /* MJ-iOS-Toolkit.h */,
 				D29BC7561C060E3100CF11BC /* Tools */,
 				D29BC74B1C060D9C00CF11BC /* Core */,
 				D29BC7631C0614EB00CF11BC /* Views */,
