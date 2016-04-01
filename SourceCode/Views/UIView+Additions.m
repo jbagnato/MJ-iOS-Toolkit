@@ -48,7 +48,10 @@
             UITableViewCell *nextCell = [tableView cellForRowAtIndexPath:nextIndexPath];
             
             NSMutableArray *subviews = [NSMutableArray array];
-            [subviews addObject:nextCell];
+            if (nextCell)
+            {
+                [subviews addObject:nextCell];
+            }
             
             while (subviews.count > 0)
             {
