@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D22ACDA81CE0F6E100452729 /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = D22ACDA01CE0F6E100452729 /* NSData+AES.m */; };
+		D22ACDA91CE0F6E100452729 /* NSData+AESKey.m in Sources */ = {isa = PBXBuildFile; fileRef = D22ACDA21CE0F6E100452729 /* NSData+AESKey.m */; };
+		D22ACDAA1CE0F6E100452729 /* NSData+AESValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D22ACDA41CE0F6E100452729 /* NSData+AESValue.m */; };
+		D22ACDAB1CE0F6E100452729 /* NSMutableData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = D22ACDA61CE0F6E100452729 /* NSMutableData+AES.m */; };
+		D22ACDAE1CE0F8BE00452729 /* NSData+SHA.m in Sources */ = {isa = PBXBuildFile; fileRef = D22ACDAD1CE0F8BE00452729 /* NSData+SHA.m */; };
+		D22ACDB11CE0FAC200452729 /* NSDataAESCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = D22ACDB01CE0FAC200452729 /* NSDataAESCipher.m */; };
 		D237C8991C15EC4E00FC1B64 /* MJAppLinkRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = D237C8981C15EC4E00FC1B64 /* MJAppLinkRecognizer.m */; };
 		D238DEFF1BC7E2D500FB0DF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D238DEFE1BC7E2D500FB0DF4 /* main.m */; };
 		D238DF021BC7E2D500FB0DF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D238DF011BC7E2D500FB0DF4 /* AppDelegate.m */; };
@@ -58,6 +64,18 @@
 /* Begin PBXFileReference section */
 		66733CDADF19DDFE0E0814BA /* Pods-MJ-iOS-Toolkit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJ-iOS-Toolkit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MJ-iOS-Toolkit/Pods-MJ-iOS-Toolkit.debug.xcconfig"; sourceTree = "<group>"; };
 		669D30EECED1E09DE17BD2FD /* Pods-MJ-iOS-Toolkit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJ-iOS-Toolkit.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJ-iOS-Toolkit/Pods-MJ-iOS-Toolkit.release.xcconfig"; sourceTree = "<group>"; };
+		D22ACD9F1CE0F6E100452729 /* NSData+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
+		D22ACDA01CE0F6E100452729 /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
+		D22ACDA11CE0F6E100452729 /* NSData+AESKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AESKey.h"; sourceTree = "<group>"; };
+		D22ACDA21CE0F6E100452729 /* NSData+AESKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AESKey.m"; sourceTree = "<group>"; };
+		D22ACDA31CE0F6E100452729 /* NSData+AESValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AESValue.h"; sourceTree = "<group>"; };
+		D22ACDA41CE0F6E100452729 /* NSData+AESValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AESValue.m"; sourceTree = "<group>"; };
+		D22ACDA51CE0F6E100452729 /* NSMutableData+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableData+AES.h"; sourceTree = "<group>"; };
+		D22ACDA61CE0F6E100452729 /* NSMutableData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableData+AES.m"; sourceTree = "<group>"; };
+		D22ACDAC1CE0F8BE00452729 /* NSData+SHA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SHA.h"; sourceTree = "<group>"; };
+		D22ACDAD1CE0F8BE00452729 /* NSData+SHA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SHA.m"; sourceTree = "<group>"; };
+		D22ACDAF1CE0FAC200452729 /* NSDataAESCipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAESCipher.h; sourceTree = "<group>"; };
+		D22ACDB01CE0FAC200452729 /* NSDataAESCipher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAESCipher.m; sourceTree = "<group>"; };
 		D237C8971C15EC4E00FC1B64 /* MJAppLinkRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MJAppLinkRecognizer.h; path = Tools/MJAppLinkRecognizer.h; sourceTree = "<group>"; };
 		D237C8981C15EC4E00FC1B64 /* MJAppLinkRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MJAppLinkRecognizer.m; path = Tools/MJAppLinkRecognizer.m; sourceTree = "<group>"; };
 		D238DEFA1BC7E2D400FB0DF4 /* MJ-iOS-Toolkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MJ-iOS-Toolkit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +168,26 @@
 				E29FF717B1CBC5520389DA4E /* libPods-MJ-iOS-Toolkit.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D22ACD9C1CE0F6E100452729 /* NSData+AES */ = {
+			isa = PBXGroup;
+			children = (
+				D22ACDAC1CE0F8BE00452729 /* NSData+SHA.h */,
+				D22ACDAD1CE0F8BE00452729 /* NSData+SHA.m */,
+				D22ACDAF1CE0FAC200452729 /* NSDataAESCipher.h */,
+				D22ACDB01CE0FAC200452729 /* NSDataAESCipher.m */,
+				D22ACD9F1CE0F6E100452729 /* NSData+AES.h */,
+				D22ACDA01CE0F6E100452729 /* NSData+AES.m */,
+				D22ACDA11CE0F6E100452729 /* NSData+AESKey.h */,
+				D22ACDA21CE0F6E100452729 /* NSData+AESKey.m */,
+				D22ACDA31CE0F6E100452729 /* NSData+AESValue.h */,
+				D22ACDA41CE0F6E100452729 /* NSData+AESValue.m */,
+				D22ACDA51CE0F6E100452729 /* NSMutableData+AES.h */,
+				D22ACDA61CE0F6E100452729 /* NSMutableData+AES.m */,
+			);
+			name = "NSData+AES";
+			path = "Tools/NSData+AES";
 			sourceTree = "<group>";
 		};
 		D238DEF11BC7E2D400FB0DF4 = {
@@ -266,6 +304,7 @@
 				D25FE4521C60E9D6007D4ED8 /* MJPushNotificationQueue.m */,
 				D25FE4571C60EA70007D4ED8 /* MJObjectStack.h */,
 				D25FE4581C60EA70007D4ED8 /* MJObjectStack.m */,
+				D22ACD9C1CE0F6E100452729 /* NSData+AES */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -496,16 +535,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D22ACDA91CE0F6E100452729 /* NSData+AESKey.m in Sources */,
+				D22ACDA81CE0F6E100452729 /* NSData+AES.m in Sources */,
 				D2C99C0E1BDE74D300CCC485 /* MJContainerViewController.m in Sources */,
 				D25FE4531C60E9D6007D4ED8 /* MJPushNotificationQueue.m in Sources */,
 				D29BC7751C06158F00CF11BC /* NSString+Additions.m in Sources */,
+				D22ACDB11CE0FAC200452729 /* NSDataAESCipher.m in Sources */,
 				D29BC77D1C06164D00CF11BC /* UIActionSheet+Blocks.m in Sources */,
 				D29BC77E1C06164D00CF11BC /* UIAlertView+Blocks.m in Sources */,
 				D29BC7871C06179600CF11BC /* UIImageView+MJCloudinaryInterface.m in Sources */,
 				D29BC7811C06177500CF11BC /* MJTextViewCell.m in Sources */,
+				D22ACDAA1CE0F6E100452729 /* NSData+AESValue.m in Sources */,
 				D237C8991C15EC4E00FC1B64 /* MJAppLinkRecognizer.m in Sources */,
 				D29BC7761C06158F00CF11BC /* UIBarButtonItem+Additions.m in Sources */,
 				D25FE4561C60E9F5007D4ED8 /* MJTableViewController.m in Sources */,
+				D22ACDAE1CE0F8BE00452729 /* NSData+SHA.m in Sources */,
 				D29BC7551C060DCB00CF11BC /* MJTaskDispatcher.m in Sources */,
 				D29BC7661C0614EB00CF11BC /* MJMultiToggleControl.m in Sources */,
 				D29BC7781C06158F00CF11BC /* UIView+Additions.m in Sources */,
@@ -515,6 +559,7 @@
 				D29BC7591C060E4100CF11BC /* MJSecureKey.m in Sources */,
 				D25FE4501C60E99A007D4ED8 /* MJDataProviderDirector.m in Sources */,
 				D238DF021BC7E2D500FB0DF4 /* AppDelegate.m in Sources */,
+				D22ACDAB1CE0F6E100452729 /* NSMutableData+AES.m in Sources */,
 				D29BC75F1C06103900CF11BC /* MJInteractor.m in Sources */,
 				D25FE45C1C60EBDC007D4ED8 /* MJNotificationView.m in Sources */,
 				D29BC7771C06158F00CF11BC /* UIResponder+Addtions.m in Sources */,
