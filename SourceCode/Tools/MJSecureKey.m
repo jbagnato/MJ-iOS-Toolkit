@@ -84,7 +84,7 @@
     // First check in the keychain for an existing key
     NSDictionary *query = @{(__bridge id)kSecClass: (__bridge id)kSecClassKey,
                             (__bridge id)kSecAttrApplicationTag: tag,
-                            (__bridge id)kSecAttrKeySizeInBits: @512,
+                            (__bridge id)kSecAttrKeySizeInBits: @(_length),
                             (__bridge id)kSecReturnData: @YES};
     
     CFTypeRef dataRef = NULL;
@@ -119,7 +119,7 @@
         // Store the key in the keychain
         query = @{(__bridge id)kSecClass: (__bridge id)kSecClassKey,
                   (__bridge id)kSecAttrApplicationTag: tag,
-                  (__bridge id)kSecAttrKeySizeInBits: @512,
+                  (__bridge id)kSecAttrKeySizeInBits: @(_length),
                   (__bridge id)kSecAttrAccessible: (__bridge id)kSecAttrAccessibleAlways,
                   (__bridge id)kSecValueData: keyData};
         
